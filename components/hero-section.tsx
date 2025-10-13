@@ -2,9 +2,11 @@
 
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function Hero() {
+	const t = useTranslations('Hero');
 	return (
 		<section
 			id="home"
@@ -30,11 +32,11 @@ export default function Hero() {
 							className="text-5xl sm:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-playfair)] text-balance leading-tight"
 						>
 							<span className="bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent ">
-								Your Partner
+								{t('title.line1')}
 							</span>
 							<br />
 							<span className="text-foreground capitalize">
-								in Power & Maintenance
+								{t('title.line2')}
 							</span>
 						</motion.h1>
 
@@ -48,10 +50,7 @@ export default function Hero() {
 							}}
 							className="text-lg sm:text-xl text-muted-foreground font-[family-name:var(--font-source-sans)] leading-relaxed text-pretty max-w-xl"
 						>
-							We combine advanced technology, tailored
-							engineering, and expert maintenance to ensure
-							efficiency, safety, and lasting performance for your
-							electrical systems.
+							{t('subtitle')}
 						</motion.p>
 
 						<motion.div
@@ -68,14 +67,14 @@ export default function Hero() {
 								size="lg"
 								className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
 							>
-								Contact now
+								{t('buttons.contact')}
 							</Button>
 							<Button
 								size="lg"
 								variant="outline"
 								className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold px-8 py-6 text-base transition-all hover:scale-105 bg-transparent"
 							>
-								Learn more
+								{t('buttons.learn')}
 							</Button>
 						</motion.div>
 
@@ -95,7 +94,7 @@ export default function Hero() {
 									50+
 								</div>
 								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
-									Projects
+									{t('stats.projects')}
 								</div>
 							</div>
 							<div>
@@ -103,7 +102,7 @@ export default function Hero() {
 									98%
 								</div>
 								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
-									Satisfaction
+									{t('stats.satisfaction')}
 								</div>
 							</div>
 							<div>
@@ -111,7 +110,7 @@ export default function Hero() {
 									24/7
 								</div>
 								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
-									Support
+									{t('stats.support')}
 								</div>
 							</div>
 						</motion.div>
@@ -168,10 +167,10 @@ export default function Hero() {
 								</div>
 								<div>
 									<div className="text-sm font-semibold text-foreground">
-										Clean work
+										{t('card.title')}
 									</div>
 									<div className="text-xs text-muted-foreground">
-										Sustainable & Efficient
+										{t('stats.subtitle')}
 									</div>
 								</div>
 							</div>

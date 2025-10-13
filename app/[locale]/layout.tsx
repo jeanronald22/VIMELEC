@@ -2,9 +2,11 @@ import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
-import './globals.css';
+import '../globals.css';
 import { Suspense } from 'react';
 import { ThemeProvider } from 'next-themes';
+import { NextIntlClientProvider } from 'next-intl';
+import { Loader2 } from 'lucide-react';
 
 const playfair = Inter({
 	subsets: ['latin'],
@@ -91,16 +93,24 @@ export const metadata: Metadata = {
 		shortcut: '/favicon-16x16.png',
 		apple: '/apple-touch-icon.png',
 	},
-	manifest: '/site.webmanifest', //TODO: a definir
+	// manifest: '/site.webmanifest', //TODO: a definir
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
 	children,
+	params: { locale },
 }: Readonly<{
 	children: React.ReactNode;
+	params: { locale: string };
 }>) {
+	let messages;
+	try {
+		messages = await import(`../../messages/${locale}.json`);
+	} catch (error) {
+		console.log(error);
+	}
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang={locale} suppressHydrationWarning>
 			<head>
 				<script
 					type="application/ld+json"
@@ -141,17 +151,28 @@ export default function RootLayout({
 			<body
 				className={`font-sans ${playfair.variable} ${sourceSans.variable}`}
 			>
-				<Suspense fallback={<div>Loading...</div>}>
-					<ThemeProvider
-						attribute="class"
-						defaultTheme="system"
-						enableSystem
-						disableTransitionOnChange
+				<NextIntlClientProvider
+					locale={locale}
+					messages={messages?.default}
+				>
+					<Suspense
+						fallback={
+							<div className="w-full h-screen flex justify-center items-center">
+								<Loader2 className="spin-in" />
+							</div>
+						}
 					>
-						{children}
-					</ThemeProvider>
-					<Analytics />
-				</Suspense>
+						<ThemeProvider
+							attribute="class"
+							defaultTheme="system"
+							enableSystem
+							disableTransitionOnChange
+						>
+							{children}
+						</ThemeProvider>
+						<Analytics />
+					</Suspense>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

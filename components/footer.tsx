@@ -11,39 +11,70 @@ import {
 	Linkedin,
 	Instagram,
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+	const t = useTranslations('Footer');
 	const currentYear = new Date().getFullYear();
 
-	const footerLinks = {
-		company: [
-			{ name: 'About Us', href: '#about' },
-			{ name: 'Services', href: '#services' },
-			{ name: 'Recent Works', href: '#recent-works' },
-		],
-		services: [
-			{ name: 'Solar Installation', href: '#services' },
-			{ name: 'Energy Audit', href: '#services' },
-			{ name: 'Smart Home', href: '#services' },
-			{ name: 'Maintenance', href: '#services' },
-		],
-		legal: [
-			{ name: 'Privacy Policy', href: '#' },
-			{ name: 'Terms of Service', href: '#' },
-		],
-	};
-
-	const socialLinks = [
-		{ icon: Facebook, href: '#', label: 'Facebook' },
-		{ icon: Twitter, href: '#', label: 'Twitter' },
-		{ icon: Linkedin, href: '#', label: 'LinkedIn' },
-		{ icon: Instagram, href: '#', label: 'Instagram' },
+	// 🔹 Company Links
+	const companyLinks = [
+		{
+			name: t('companyLinks.about.name'),
+			href: t('companyLinks.about.href'),
+		},
+		{
+			name: t('companyLinks.services.name'),
+			href: t('companyLinks.services.href'),
+		},
+		{
+			name: t('companyLinks.recentWorks.name'),
+			href: t('companyLinks.recentWorks.href'),
+		},
 	];
 
+	// 🔹 Services Links
+	const servicesLinks = [
+		{
+			name: t('servicesLinks.solar.name'),
+			href: t('servicesLinks.solar.href'),
+		},
+		{
+			name: t('servicesLinks.audit.name'),
+			href: t('servicesLinks.audit.href'),
+		},
+		{
+			name: t('servicesLinks.smartHome.name'),
+			href: t('servicesLinks.smartHome.href'),
+		},
+		{
+			name: t('servicesLinks.maintenance.name'),
+			href: t('servicesLinks.maintenance.href'),
+		},
+	];
+
+	// 🔹 Legal Links
+	const legalLinks = [
+		{
+			name: t('legalLinks.privacy.name'),
+			href: t('legalLinks.privacy.href'),
+		},
+		{ name: t('legalLinks.terms.name'), href: t('legalLinks.terms.href') },
+	];
+
+	// 🔹 Contact Info
 	const contactInfo = [
-		{ icon: Phone, text: '+237 657 613 211' },
-		{ icon: Mail, text: 'contact@vimelec.com' },
-		{ icon: MapPin, text: 'Yassa, Douala' },
+		{ icon: Phone, text: t('contactInfo.phone') },
+		{ icon: Mail, text: t('contactInfo.email') },
+		{ icon: MapPin, text: t('contactInfo.address') },
+	];
+
+	// 🔹 Social Links
+	const socialLinks = [
+		{ icon: Facebook, href: '#', label: t('social.facebook') },
+		{ icon: Twitter, href: '#', label: t('social.twitter') },
+		{ icon: Linkedin, href: '#', label: t('social.linkedin') },
+		{ icon: Instagram, href: '#', label: t('social.instagram') },
 	];
 
 	return (
@@ -69,6 +100,7 @@ export default function Footer() {
 								VIMELEC
 							</span>
 						</Link>
+
 						<p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
 							Powering tomorrow with innovative energy solutions.
 							We transform how you consume and manage energy for a
@@ -104,10 +136,10 @@ export default function Footer() {
 						transition={{ duration: 0.5, delay: 0.1 }}
 					>
 						<h3 className="font-semibold text-foreground mb-4">
-							Company
+							{t('companyTitle')}
 						</h3>
 						<ul className="space-y-3">
-							{footerLinks.company.map((link, index) => (
+							{companyLinks.map((link, index) => (
 								<li key={index}>
 									<Link
 										href={link.href}
@@ -129,10 +161,10 @@ export default function Footer() {
 						transition={{ duration: 0.5, delay: 0.2 }}
 					>
 						<h3 className="font-semibold text-foreground mb-4">
-							Services
+							{t('servicesTitle')}
 						</h3>
 						<ul className="space-y-3">
-							{footerLinks.services.map((link, index) => (
+							{servicesLinks.map((link, index) => (
 								<li key={index}>
 									<Link
 										href={link.href}
@@ -154,10 +186,10 @@ export default function Footer() {
 						transition={{ duration: 0.5, delay: 0.3 }}
 					>
 						<h3 className="font-semibold text-foreground mb-4">
-							Legal
+							{t('legalTitle')}
 						</h3>
 						<ul className="space-y-3">
-							{footerLinks.legal.map((link, index) => (
+							{legalLinks.map((link, index) => (
 								<li key={index}>
 									<Link
 										href={link.href}
@@ -203,12 +235,11 @@ export default function Footer() {
 					transition={{ duration: 0.5, delay: 0.5 }}
 					className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
 				>
-					<p>© {currentYear} VIMELEC. All rights reserved.</p>
+					<p>
+						© {currentYear} VIMELEC. {t('copyright')}
+					</p>
 					<div className="flex items-center gap-2">
-						<span>Powered by</span>
-						<span className="font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-							Jean Ronald
-						</span>
+						<span>{t('poweredBy')}</span>
 					</div>
 				</motion.div>
 			</div>

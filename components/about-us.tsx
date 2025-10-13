@@ -2,32 +2,35 @@
 
 import { motion } from 'framer-motion';
 import { Zap, Shield, Users, Award } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-const features = [
-	{
-		icon: Zap,
-		title: 'Innovation',
-		description: 'Cutting-edge technology for sustainable energy solutions',
-	},
-	{
-		icon: Shield,
-		title: 'Reliability',
-		description: 'Trusted by thousands of clients worldwide',
-	},
-	{
-		icon: Users,
-		title: 'Expertise',
-		description: 'Over 15 years of industry experience',
-	},
-	{
-		icon: Award,
-		title: 'Excellence',
-		description: 'Award-winning service and support',
-	},
-];
-
 export default function AboutUs() {
+	const t = useTranslations('AboutUs');
+
+	const features = [
+		{
+			icon: Zap,
+			title: t('features.innovation.title'),
+			description: t('features.innovation.description'),
+		},
+		{
+			icon: Shield,
+			title: t('features.reliability.title'),
+			description: t('features.reliability.description'),
+		},
+		{
+			icon: Users,
+			title: t('features.expertise.title'),
+			description: t('features.expertise.description'),
+		},
+		{
+			icon: Award,
+			title: t('features.excellence.title'),
+			description: t('features.excellence.description'),
+		},
+	];
+
 	return (
 		<section
 			id="about"
@@ -49,17 +52,16 @@ export default function AboutUs() {
 					transition={{ duration: 0.5 }}
 					className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4"
 				>
-					About Us
+					{t('badge')}
 				</motion.span>
 				<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance">
-					Start Your Energy{' '}
+					{t('title.line1')}
 					<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-						Transformation
+						{t('title.line2')}
 					</span>
 				</h2>
 				<p className="text-lg text-muted-foreground font-[family-name:var(--font-source-sans)] max-w-2xl mx-auto text-pretty">
-					Ready to power your future? Contact us today for a free
-					consultation and discover how we can help
+					{t('subtitle')}
 				</p>
 			</motion.div>
 
@@ -79,9 +81,9 @@ export default function AboutUs() {
 							transition={{ duration: 0.6, delay: 0.3 }}
 							className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance"
 						>
-							Leading the Way in{' '}
+							{t('mainTitle.line1')}
 							<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-								Sustainable Energy
+								{t('mainTitle.line2')}
 							</span>
 						</motion.h2>
 
@@ -92,12 +94,7 @@ export default function AboutUs() {
 							transition={{ duration: 0.6, delay: 0.4 }}
 							className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed"
 						>
-							At EnergyTech, we are committed to transforming the
-							energy landscape through innovative solutions and
-							sustainable practices. Our mission is to provide
-							reliable, efficient, and eco-friendly energy systems
-							that power a brighter future for generations to
-							come.
+							{t('mainDescription')}
 						</motion.p>
 
 						{/* Features Grid */}
@@ -164,11 +161,10 @@ export default function AboutUs() {
 									</div>
 									<div>
 										<h4 className="font-semibold text-foreground mb-1">
-											Industry Leader
+											{t('card.title')}
 										</h4>
 										<p className="text-sm text-muted-foreground">
-											Recognized for excellence in
-											sustainable energy solutions
+											{t('card.subtitle')}
 										</p>
 									</div>
 								</div>
