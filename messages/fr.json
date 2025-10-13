@@ -1,0 +1,271 @@
+{
+	"Nav": {
+		"home": "Accueil",
+		"about": "À propos",
+		"services": "Services",
+		"works": "Travaux récents",
+		"contact": "Contact",
+		"quote": "Obtenir un devis gratuit"
+	},
+	"Hero": {
+		"title": {
+			"line1": "Votre Partenaire",
+			"line2": "en Énergie & Maintenance"
+		},
+		"subtitle": "Nous combinons technologie avancée, ingénierie sur mesure et maintenance experte pour assurer efficacité, sécurité et performance durable de vos systèmes électriques.",
+		"buttons": {
+			"contact": "Contactez-nous",
+			"learn": "En savoir plus"
+		},
+		"stats": {
+			"projects": "Projets",
+			"satisfaction": "Satisfaction",
+			"support": "Support"
+		},
+		"card": {
+			"title": "Travail propre",
+			"subtitle": "Durable & Efficace"
+		}
+	},
+	"AboutUs": {
+		"badge": "À propos",
+		"title": {
+			"line1": "Commencez votre",
+			"line2": "Transformation énergétique"
+		},
+		"subtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
+		"mainTitle": {
+			"line1": "À la pointe de",
+			"line2": "l'énergie durable"
+		},
+		"mainDescription": "Chez EnergyTech, nous nous engageons à transformer le paysage énergétique grâce à des solutions innovantes et des pratiques durables. Notre mission est de fournir des systèmes énergétiques fiables, efficaces et écologiques pour un avenir meilleur.",
+		"features": {
+			"innovation": {
+				"title": "Innovation",
+				"description": "Technologie de pointe pour des solutions énergétiques durables"
+			},
+			"reliability": {
+				"title": "Fiabilité",
+				"description": "Fiable et adopté par des milliers de clients dans le monde entier"
+			},
+			"expertise": {
+				"title": "Expertise",
+				"description": "Plus de 15 ans d'expérience dans le secteur"
+			},
+			"excellence": {
+				"title": "Excellence",
+				"description": "Service et support primés"
+			}
+		},
+		"card": {
+			"title": "Leader du secteur",
+			"subtitle": "Reconnu pour l'excellence dans les solutions énergétiques durables"
+		}
+	},
+	"Services": {
+		"sectionTitle": "Solutions Énergétiques Complètes",
+		"sectionSubtitle": "De l'installation à la maintenance, nous fournissons des solutions électriques et énergétiques adaptées à vos besoins",
+		"cta": "Demander une consultation",
+
+		"electricalInstallation": {
+			"title": "Installation Électrique",
+			"description": "Services professionnels d'installation électrique pour les résidences et les entreprises avec des techniciens certifiés",
+			"feature1": "Câblage & Recâblage",
+			"feature2": "Mise à niveau des panneaux",
+			"feature3": "Inspections de sécurité"
+		},
+
+		"solarEnergy": {
+			"title": "Solutions Énergie Solaire",
+			"description": "Exploitez la puissance du soleil grâce à nos services d'installation et de maintenance de panneaux solaires de pointe",
+			"feature1": "Installation de panneaux solaires",
+			"feature2": "Stockage d'énergie",
+			"feature3": "Intégration au réseau"
+		},
+
+		"energyStorage": {
+			"title": "Systèmes de Stockage d'Énergie",
+			"description": "Solutions avancées de stockage par batterie pour maximiser votre indépendance énergétique et réduire les coûts",
+			"feature1": "Installation de batteries",
+			"feature2": "Alimentation de secours",
+			"feature3": "Gestion de charge"
+		},
+
+		"smartHome": {
+			"title": "Intégration Domotique",
+			"description": "Transformez votre espace avec des systèmes intelligents de gestion d'énergie et d'éclairage pour une efficacité optimale",
+			"feature1": "Éclairage intelligent",
+			"feature2": "Automatisation",
+			"feature3": "Surveillance énergétique"
+		},
+
+		"maintenance": {
+			"title": "Maintenance & Support",
+			"description": "Plans de maintenance complets et support 24/7 pour garantir des systèmes performants en permanence",
+			"feature1": "Inspections régulières",
+			"feature2": "Urgences 24/7",
+			"feature3": "Entretien préventif"
+		},
+
+		"energyConsulting": {
+			"title": "Conseil Énergétique",
+			"description": "Analyse experte et recommandations pour optimiser votre consommation d'énergie et réduire les coûts opérationnels",
+			"feature1": "Audits énergétiques",
+			"feature2": "Analyse des coûts",
+			"feature3": "Planification de l'efficacité"
+		}
+	},
+	"RecentWorks": {
+		"sectionTitle": "Portfolio",
+		"sectionSubtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider",
+		"cta": "Voir tous les projets",
+
+		"projects": {
+			"solarFarm": {
+				"title": "Installation d'une Ferme Solaire",
+				"location": "Cameroun, TOTAL",
+				"date": "Décembre 2024",
+				"description": "Installation solaire commerciale de 500 kW avec systèmes avancés de stockage d'énergie",
+				"category": "Énergie Solaire",
+				"stat1": "500kW",
+				"stat2": "1 200+ panneaux",
+				"stat3": "Économies 40%"
+			},
+			"smartOffice": {
+				"title": "Bâtiment de Bureau Intelligent",
+				"location": "Cameroun, PERENCO RIO DEL REY",
+				"date": "Novembre 2024",
+				"description": "Rénovation complète électrique avec automatisation intelligente et suivi énergétique",
+				"category": "Systèmes Intelligents",
+				"stat1": "50 000 sq ft",
+				"stat2": "300+ appareils",
+				"stat3": "Efficacité 35%"
+			},
+			"residentialSolar": {
+				"title": "Complexe Résidentiel Solaire",
+				"location": "Gabon, SEEG",
+				"date": "Octobre 2024",
+				"description": "Installation solaire multi-maisons avec stockage communautaire de batteries",
+				"category": "Résidentiel",
+				"stat1": "45 maisons",
+				"stat2": "250kW capacité",
+				"stat3": "Réduction 60%"
+			},
+			"industrialUpgrade": {
+				"title": "Amélioration Électrique Industrielle",
+				"location": "Congo, TOTAL",
+				"date": "Septembre 2024",
+				"description": "Mise à niveau du système électrique haute tension pour une installation industrielle",
+				"category": "Industriel",
+				"stat1": "480V",
+				"stat2": "Disponibilité 99,9%",
+				"stat3": "2MW capacité"
+			},
+			"evCharging": {
+				"title": "Réseau de Recharge EV",
+				"location": "Gabon, PERENCO",
+				"date": "Août 2024",
+				"description": "Installation de 20 stations de recharge rapide dans le district commercial",
+				"category": "Infrastructure EV",
+				"stat1": "20 stations",
+				"stat2": "150kW puissance",
+				"stat3": "500+ véhicules/jour"
+			},
+			"greenCampus": {
+				"title": "Initiative Campus Vert",
+				"location": "Mauritanie, SOMELEC",
+				"date": "Juillet 2024",
+				"description": "Transformation énergétique et solaire sur le campus universitaire",
+				"category": "Éducation",
+				"stat1": "12 bâtiments",
+				"stat2": "1MW solaire",
+				"stat3": "Économies $200K/an"
+			}
+		}
+	},
+	"Contact": {
+		"sectionTitle": "Contactez-nous",
+		"sectionTitleHighlight": "Commencez votre transformation Energetique",
+		"sectionSubtitle": "Prêt à alimenter votre avenir ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
+		"formTitle": "Envoyez-nous un message",
+		"firstNameLabel": "Prénom",
+		"firstNamePlaceholder": "Jean",
+		"lastNameLabel": "Nom",
+		"lastNamePlaceholder": "Dupont",
+		"emailLabel": "Email",
+		"emailPlaceholder": "jean@example.com",
+		"phoneLabel": "Numéro de téléphone",
+		"phonePlaceholder": "+237 657 613 211",
+		"serviceLabel": "Service d'intérêt",
+		"servicePlaceholder": "Sélectionnez un service",
+		"services": {
+			"electrical": "Installation électrique",
+			"solar": "Solutions énergie solaire",
+			"storage": "Systèmes de stockage d'énergie",
+			"smart": "Intégration domotique",
+			"maintenance": "Maintenance & support",
+			"consulting": "Conseil énergétique"
+		},
+		"messageLabel": "Message",
+		"messagePlaceholder": "Parlez-nous de votre projet...",
+		"sendButton": "Envoyer le message",
+		"infoTitle": "Informations de contact",
+		"infoSubtitle": "Des questions ? Nous sommes là pour vous aider. Contactez-nous via l'un de ces canaux et notre équipe vous répondra rapidement.",
+		"phone": {
+			"title": "Téléphone",
+			"details": "+237 657613211",
+			"link": "tel:+237657613211"
+		},
+		"email": {
+			"title": "Email",
+			"details": "jeroboumg@gmail.com",
+			"link": "mailto:jeroboumg@gmail.com"
+		},
+		"office": {
+			"title": "Bureau",
+			"details": "Yassa, Douala",
+			"link": "#"
+		},
+		"hours": {
+			"title": "Heures d'ouverture",
+			"details": "Lun-Ven : 8h-18h, Sam : 9h-16h",
+			"link": "#"
+		}
+	},
+	"Footer": {
+		"companyTitle": "Entreprise",
+		"companyLinks": {
+			"about": { "name": "À propos", "href": "#about" },
+			"services": { "name": "Services", "href": "#services" },
+			"recentWorks": {
+				"name": "Travaux récents",
+				"href": "#recent-works"
+			}
+		},
+		"servicesTitle": "Services",
+		"servicesLinks": {
+			"solar": { "name": "Installation solaire", "href": "#services" },
+			"audit": { "name": "Audit énergétique", "href": "#services" },
+			"smartHome": { "name": "Domotique", "href": "#services" },
+			"maintenance": { "name": "Maintenance", "href": "#services" }
+		},
+		"legalTitle": "Mentions légales",
+		"legalLinks": {
+			"privacy": { "name": "Politique de confidentialité", "href": "#" },
+			"terms": { "name": "Conditions d'utilisation", "href": "#" }
+		},
+		"contactInfo": {
+			"phone": "+237 657 613 211",
+			"email": "contact@vimelec.com",
+			"address": "Yassa, Douala"
+		},
+		"social": {
+			"facebook": "Facebook",
+			"twitter": "Twitter",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram"
+		},
+		"copyright": "Tous droits réservés.",
+		"poweredBy": "Fait par Jean Ronald"
+	}
+}
