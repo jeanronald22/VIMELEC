@@ -5,8 +5,8 @@ import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 import { Suspense } from 'react';
 import { ThemeProvider } from 'next-themes';
-import { NextIntlClientProvider } from 'next-intl';
 import { Loader2 } from 'lucide-react';
+import LoadMessage from '@/components/LoadMessage';
 
 const playfair = Inter({
 	subsets: ['latin'],
@@ -96,19 +96,15 @@ export const metadata: Metadata = {
 	// manifest: '/site.webmanifest', //TODO: a definir
 };
 
-export default async function LocaleLayout({
+export default async function Layout({
 	children,
-	params: { locale },
+	params,
 }: Readonly<{
 	children: React.ReactNode;
-	params: { locale: string };
+	params: Promise<{ locale: string }>;
 }>) {
-	let messages;
-	try {
-		messages = await import(`../../messages/${locale}.json`);
-	} catch (error) {
-		console.log(error);
-	}
+	const { locale } = await params;
+
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head>
@@ -151,10 +147,7 @@ export default async function LocaleLayout({
 			<body
 				className={`font-sans ${playfair.variable} ${sourceSans.variable}`}
 			>
-				<NextIntlClientProvider
-					locale={locale}
-					messages={messages?.default}
-				>
+				<LoadMessage locale={locale}>
 					<Suspense
 						fallback={
 							<div className="w-full h-screen flex justify-center items-center">
@@ -172,7 +165,7 @@ export default async function LocaleLayout({
 						</ThemeProvider>
 						<Analytics />
 					</Suspense>
-				</NextIntlClientProvider>
+				</LoadMessage>
 			</body>
 		</html>
 	);

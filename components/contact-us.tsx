@@ -1,14 +1,30 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useTranslations } from 'next-intl';
+import sendEmail from '@/services/sendEmail';
+import { FormEvent, useState } from 'react';
 
 export default function Contact() {
 	const t = useTranslations('Contact');
+	const [loading, setLoading] = useState(false);
+	const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		try {
+			setLoading(true);
+			e.preventDefault();
+			await sendEmail(e.currentTarget);
+			setLoading(false);
+			window.alert('message envoyer avec success');
+		} catch (e) {
+			console.log(e);
+		} finally {
+			setLoading(false);
+		}
+	};
 
 	const contactInfo = [
 		{
@@ -77,7 +93,10 @@ export default function Contact() {
 						<h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-6">
 							{t('formTitle')}
 						</h3>
-						<form className="space-y-6">
+						<form
+							className="space-y-6"
+							onSubmit={(e) => onSubmit(e)}
+						>
 							<div className="grid md:grid-cols-2 gap-4">
 								<div>
 									<label
@@ -90,6 +109,7 @@ export default function Contact() {
 										id="firstName"
 										placeholder={t('firstNamePlaceholder')}
 										className="w-full"
+										name="firstName"
 									/>
 								</div>
 								<div>
@@ -103,6 +123,7 @@ export default function Contact() {
 										id="lastName"
 										placeholder={t('lastNamePlaceholder')}
 										className="w-full"
+										name="lastName"
 									/>
 								</div>
 							</div>
@@ -119,6 +140,7 @@ export default function Contact() {
 									type="email"
 									placeholder={t('emailPlaceholder')}
 									className="w-full"
+									name="email"
 								/>
 							</div>
 
@@ -134,6 +156,7 @@ export default function Contact() {
 									type="tel"
 									placeholder={t('phonePlaceholder')}
 									className="w-full"
+									name="phone"
 								/>
 							</div>
 
@@ -147,6 +170,7 @@ export default function Contact() {
 								<select
 									id="service"
 									className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+									name="service"
 								>
 									<option value="">
 										{t('servicePlaceholder')}
@@ -184,6 +208,7 @@ export default function Contact() {
 									placeholder={t('messagePlaceholder')}
 									rows={5}
 									className="w-full resize-none"
+									name="message"
 								/>
 							</div>
 
@@ -192,6 +217,9 @@ export default function Contact() {
 								size="lg"
 								className="w-full bg-primary hover:opacity-90 transition-opacity text-white"
 							>
+								{loading && (
+									<Loader2 className="animate-spin" />
+								)}
 								{t('sendButton')}{' '}
 								<Send className="w-4 h-4 ml-2" />
 							</Button>
