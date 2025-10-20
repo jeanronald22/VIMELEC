@@ -239,7 +239,9 @@ export default function Footer() {
 						© {currentYear} VIMELEC. {t('copyright')}
 					</p>
 					<div className="flex items-center gap-2">
-						<span>{t('poweredBy')}</span>
+						<a href="mailto:jeroboumg@gmail.com">
+							<span>{t('poweredBy')}</span>
+						</a>
 					</div>
 				</motion.div>
 			</div>

@@ -129,12 +129,14 @@ export function NavBar() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 						>
-							<Button
-								className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-								size="lg"
-							>
-								{t('quote')}
-							</Button>
+							<Link href="/#contact" scroll={true}>
+								<Button
+									className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+									size="lg"
+								>
+									{t('quote')}
+								</Button>
+							</Link>
 						</motion.div>
 					</div>
 

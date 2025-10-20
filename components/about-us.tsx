@@ -141,7 +141,7 @@ export default function AboutUs() {
 					>
 						<div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
 							<Image
-								src="/images/main-image.jpg"
+								src="/images/about-us.jpg"
 								alt="EnergyTech team and facilities"
 								fill
 								className="object-cover"
