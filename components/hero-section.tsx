@@ -4,13 +4,14 @@ import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
 	const t = useTranslations('Hero');
 	return (
 		<section
 			id="home"
-			className=" min-h-screen .section-padding flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4 sm:px-6 lg:px-8 "
+			className=" min-h-screen pt-20 .section-padding flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4 sm:px-6 lg:px-8 "
 		>
 			<div className="max-w-7xl mx-auto w-full">
 				<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -63,19 +64,26 @@ export default function Hero() {
 							}}
 							className="flex flex-wrap gap-4"
 						>
-							<Button
-								size="lg"
-								className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
-							>
-								{t('buttons.contact')}
-							</Button>
-							<Button
-								size="lg"
-								variant="outline"
-								className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold px-8 py-6 text-base transition-all hover:scale-105 bg-transparent"
-							>
-								{t('buttons.learn')}
-							</Button>
+							{/* Lien vers la section #contact */}
+							<Link href="/#contact" scroll={true}>
+								<Button
+									size="lg"
+									className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
+								>
+									{t('buttons.contact')}
+								</Button>
+							</Link>
+
+							{/* Lien vers la section #about */}
+							<Link href="/#about" scroll={true}>
+								<Button
+									size="lg"
+									variant="outline"
+									className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold px-8 py-6 text-base transition-all hover:scale-105 bg-transparent"
+								>
+									{t('buttons.learn')}
+								</Button>
+							</Link>
 						</motion.div>
 
 						{/* Stats */}
@@ -130,7 +138,7 @@ export default function Hero() {
 						<div className="relative aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
 							<div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 mix-blend-overlay z-10" />
 							<Image
-								src="/images/main-image.jpg"
+								src="/images/hero.jpg"
 								alt="Modern energy solutions with solar panels and sustainable technology"
 								fill
 								className="object-cover"
@@ -170,7 +178,7 @@ export default function Hero() {
 										{t('card.title')}
 									</div>
 									<div className="text-xs text-muted-foreground">
-										{t('stats.subtitle')}
+										{t('card.subtitle')}
 									</div>
 								</div>
 							</div>

@@ -3,7 +3,7 @@ import { LocateIcon, Mail, Phone } from 'lucide-react';
 
 export const contacts: ContactType[] = [
 	{
-		name: '+237 657 613 211',
+		name: '+237 693 455 423',
 		icon: Phone,
 	},
 	{

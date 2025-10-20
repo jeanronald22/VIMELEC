@@ -24,25 +24,25 @@
 		},
 		"card": {
 			"title": "Travail propre",
-			"subtitle": "Durable & Efficace"
+			"subtitle": "Durable & efficace"
 		}
 	},
 	"AboutUs": {
 		"badge": "À propos",
 		"title": {
 			"line1": "Commencez votre",
-			"line2": "Transformation énergétique"
+			"line2": "transformation énergétique"
 		},
 		"subtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
 		"mainTitle": {
 			"line1": "À la pointe de",
 			"line2": "l'énergie durable"
 		},
-		"mainDescription": "Chez EnergyTech, nous nous engageons à transformer le paysage énergétique grâce à des solutions innovantes et des pratiques durables. Notre mission est de fournir des systèmes énergétiques fiables, efficaces et écologiques pour un avenir meilleur.",
+		"mainDescription": "Chez VIMELEC, nous nous engageons à transformer le paysage énergétique grâce à des solutions innovantes et des pratiques durables. Notre mission est de fournir des services de maintenance fiables, efficaces et écologiques pour un avenir meilleur.",
 		"features": {
 			"innovation": {
 				"title": "Innovation",
-				"description": "Technologie de pointe pour des solutions énergétiques durables"
+				"description": "Technologie de pointe pour des solutions de maintenance durables"
 			},
 			"reliability": {
 				"title": "Fiabilité",
@@ -50,7 +50,7 @@
 			},
 			"expertise": {
 				"title": "Expertise",
-				"description": "Plus de 15 ans d'expérience dans le secteur"
+				"description": "Plus de 10 ans d'expérience dans le secteur"
 			},
 			"excellence": {
 				"title": "Excellence",
@@ -59,19 +59,19 @@
 		},
 		"card": {
 			"title": "Leader du secteur",
-			"subtitle": "Reconnu pour l'excellence dans les solutions énergétiques durables"
+			"subtitle": "Reconnu pour l'excellence dans la fourniture de services d'ingénierie et de maintenance électrique durables"
 		}
 	},
 	"Services": {
-		"sectionTitle": "Solutions Énergétiques Complètes",
-		"sectionSubtitle": "De l'installation à la maintenance, nous fournissons des solutions électriques et énergétiques adaptées à vos besoins",
+		"sectionTitle": "Solutions d’ingénierie et de maintenance",
+		"sectionSubtitle": "De l'installation à la maintenance, nous vous proposons des solutions électriques adaptées à vos besoins",
 		"cta": "Demander une consultation",
 
 		"electricalInstallation": {
 			"title": "Installation Électrique",
 			"description": "Services professionnels d'installation électrique pour les résidences et les entreprises avec des techniciens certifiés",
-			"feature1": "Câblage & Recâblage",
-			"feature2": "Mise à niveau des panneaux",
+			"feature1": "Câblage, tests et mise en service",
+			"feature2": "Mise à niveau des tableaux électriques",
 			"feature3": "Inspections de sécurité"
 		},
 
@@ -103,7 +103,7 @@
 			"title": "Maintenance & Support",
 			"description": "Plans de maintenance complets et support 24/7 pour garantir des systèmes performants en permanence",
 			"feature1": "Inspections régulières",
-			"feature2": "Urgences 24/7",
+			"feature2": "Diagnostic et maintenance",
 			"feature3": "Entretien préventif"
 		},
 
@@ -117,75 +117,69 @@
 	},
 	"RecentWorks": {
 		"sectionTitle": "Portfolio",
-		"sectionSubtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider",
+		"sectionSubtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
 		"cta": "Voir tous les projets",
 
 		"projects": {
 			"solarFarm": {
-				"title": "Installation d'une Ferme Solaire",
-				"location": "Cameroun, TOTAL",
-				"date": "Décembre 2024",
-				"description": "Installation solaire commerciale de 500 kW avec systèmes avancés de stockage d'énergie",
-				"category": "Énergie Solaire",
-				"stat1": "500kW",
-				"stat2": "1 200+ panneaux",
-				"stat3": "Économies 40%"
+				"title": "Test d’isolement d’un transformateur",
+				"location": "Cameroun, CAMWATER",
+				"description": "Réalisation d’un test d’isolement et installation d’un transformateur élévateur de tension de 500 KVA pour le réseau principal.",
+				"category": "Énergie électrique",
+				"stat1": "Puissance : 500 KVA",
+				"stat2": "Durée : 2 semaines",
+				"stat3": "Équipe : 3 ingénieurs"
 			},
 			"smartOffice": {
-				"title": "Bâtiment de Bureau Intelligent",
-				"location": "Cameroun, PERENCO RIO DEL REY",
-				"date": "Novembre 2024",
-				"description": "Rénovation complète électrique avec automatisation intelligente et suivi énergétique",
-				"category": "Systèmes Intelligents",
-				"stat1": "50 000 sq ft",
-				"stat2": "300+ appareils",
-				"stat3": "Efficacité 35%"
+				"title": "Entretien d’un disjoncteur général",
+				"location": "Burkina Faso, CMAFO",
+				"description": "Entretien complet du disjoncteur général du tableau principal pour assurer la sécurité et la continuité électrique.",
+				"category": "Énergie électrique",
+				"stat1": "Puissance : 630A",
+				"stat2": "Durée : 3 jours",
+				"stat3": "Statut : Terminé"
 			},
 			"residentialSolar": {
-				"title": "Complexe Résidentiel Solaire",
-				"location": "Gabon, SEEG",
-				"date": "Octobre 2024",
-				"description": "Installation solaire multi-maisons avec stockage communautaire de batteries",
-				"category": "Résidentiel",
-				"stat1": "45 maisons",
-				"stat2": "250kW capacité",
-				"stat3": "Réduction 60%"
+				"title": "Installation d’un tableau industriel",
+				"location": "Douala, Cameroun",
+				"description": "Installation d’un tableau de distribution pour un site industriel avec optimisation du câblage et tests de sécurité.",
+				"category": "Industriel",
+				"stat1": "Puissance : 400V",
+				"stat2": "Durée : 1 semaine",
+				"stat3": "Statut : Opérationnel"
 			},
 			"industrialUpgrade": {
-				"title": "Amélioration Électrique Industrielle",
-				"location": "Congo, TOTAL",
-				"date": "Septembre 2024",
-				"description": "Mise à niveau du système électrique haute tension pour une installation industrielle",
+				"title": "Test de protection avec une valise OMICRON CMC630",
+				"location": "Yaoundé, Cameroun",
+				"description": "Vérification et calibration des protections électriques à l’aide d’un système OMICRON CMC630 pour garantir la fiabilité des équipements.",
 				"category": "Industriel",
-				"stat1": "480V",
-				"stat2": "Disponibilité 99,9%",
-				"stat3": "2MW capacité"
+				"stat1": "Équipement : OMICRON CMC630",
+				"stat2": "Durée : 2 jours",
+				"stat3": "Statut : Conforme"
 			},
 			"evCharging": {
-				"title": "Réseau de Recharge EV",
-				"location": "Gabon, PERENCO",
-				"date": "Août 2024",
-				"description": "Installation de 20 stations de recharge rapide dans le district commercial",
-				"category": "Infrastructure EV",
-				"stat1": "20 stations",
-				"stat2": "150kW puissance",
-				"stat3": "500+ véhicules/jour"
+				"title": "Entretien d’un DGPT2",
+				"location": "Bafoussam, Cameroun",
+				"description": "Maintenance du dispositif de protection DGPT2 sur un transformateur pour assurer une meilleure surveillance thermique et diélectrique.",
+				"category": "Industriel",
+				"stat1": "Transformateur : 250 KVA",
+				"stat2": "Durée : 1 jour",
+				"stat3": "Statut : Terminé"
 			},
 			"greenCampus": {
-				"title": "Initiative Campus Vert",
-				"location": "Mauritanie, SOMELEC",
-				"date": "Juillet 2024",
-				"description": "Transformation énergétique et solaire sur le campus universitaire",
-				"category": "Éducation",
-				"stat1": "12 bâtiments",
-				"stat2": "1MW solaire",
-				"stat3": "Économies $200K/an"
+				"title": "Remplacement d’un transformateur avec TGBT",
+				"location": "Garoua, Cameroun",
+				"description": "Travaux de remplacement d’un ancien transformateur et modernisation du TGBT pour améliorer la performance énergétique du site.",
+				"category": "Industriel",
+				"stat1": "Transformateur : 630 KVA",
+				"stat2": "Durée : 5 jours",
+				"stat3": "État : En service"
 			}
 		}
 	},
 	"Contact": {
 		"sectionTitle": "Contactez-nous",
-		"sectionTitleHighlight": "Commencez votre transformation Energetique",
+		"sectionTitleHighlight": "Commencez votre transformation énergétique",
 		"sectionSubtitle": "Prêt à alimenter votre avenir ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
 		"formTitle": "Envoyez-nous un message",
 		"firstNameLabel": "Prénom",
@@ -195,7 +189,7 @@
 		"emailLabel": "Email",
 		"emailPlaceholder": "jean@example.com",
 		"phoneLabel": "Numéro de téléphone",
-		"phonePlaceholder": "+237 657 613 211",
+		"phonePlaceholder": "+237 650 618 211",
 		"serviceLabel": "Service d'intérêt",
 		"servicePlaceholder": "Sélectionnez un service",
 		"services": {
@@ -213,8 +207,8 @@
 		"infoSubtitle": "Des questions ? Nous sommes là pour vous aider. Contactez-nous via l'un de ces canaux et notre équipe vous répondra rapidement.",
 		"phone": {
 			"title": "Téléphone",
-			"details": "+237 657613211",
-			"link": "tel:+237657613211"
+			"details": "+237 693 455 423",
+			"link": "tel:+237693455423"
 		},
 		"email": {
 			"title": "Email",
@@ -255,7 +249,7 @@
 			"terms": { "name": "Conditions d'utilisation", "href": "#" }
 		},
 		"contactInfo": {
-			"phone": "+237 657 613 211",
+			"phone": "+237 693 455 423",
 			"email": "contact@vimelec.com",
 			"address": "Yassa, Douala"
 		},

@@ -1,10 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, Calendar } from 'lucide-react';
-import { Button } from './ui/button';
-import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function RecentWorks() {
 	const t = useTranslations('RecentWorks');
@@ -13,10 +12,9 @@ export default function RecentWorks() {
 	const projects = [
 		{
 			title: t('projects.solarFarm.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet1.jpg',
 			category: t('projects.solarFarm.category'),
 			location: t('projects.solarFarm.location'),
-			date: t('projects.solarFarm.date'),
 			description: t('projects.solarFarm.description'),
 			stat1: t('projects.solarFarm.stat1'),
 			stat2: t('projects.solarFarm.stat2'),
@@ -24,10 +22,9 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.smartOffice.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet2.jpg',
 			category: t('projects.smartOffice.category'),
 			location: t('projects.smartOffice.location'),
-			date: t('projects.smartOffice.date'),
 			description: t('projects.smartOffice.description'),
 			stat1: t('projects.smartOffice.stat1'),
 			stat2: t('projects.smartOffice.stat2'),
@@ -35,10 +32,9 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.residentialSolar.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet3.jpg',
 			category: t('projects.residentialSolar.category'),
 			location: t('projects.residentialSolar.location'),
-			date: t('projects.residentialSolar.date'),
 			description: t('projects.residentialSolar.description'),
 			stat1: t('projects.residentialSolar.stat1'),
 			stat2: t('projects.residentialSolar.stat2'),
@@ -46,10 +42,9 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.industrialUpgrade.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet4.jpg',
 			category: t('projects.industrialUpgrade.category'),
 			location: t('projects.industrialUpgrade.location'),
-			date: t('projects.industrialUpgrade.date'),
 			description: t('projects.industrialUpgrade.description'),
 			stat1: t('projects.industrialUpgrade.stat1'),
 			stat2: t('projects.industrialUpgrade.stat2'),
@@ -57,10 +52,9 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.evCharging.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet5.jpg',
 			category: t('projects.evCharging.category'),
 			location: t('projects.evCharging.location'),
-			date: t('projects.evCharging.date'),
 			description: t('projects.evCharging.description'),
 			stat1: t('projects.evCharging.stat1'),
 			stat2: t('projects.evCharging.stat2'),
@@ -68,10 +62,9 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.greenCampus.title'),
-			image: '/projects/distrib.jpg',
+			image: '/projects/projet6.jpg',
 			category: t('projects.greenCampus.category'),
 			location: t('projects.greenCampus.location'),
-			date: t('projects.greenCampus.date'),
 			description: t('projects.greenCampus.description'),
 			stat1: t('projects.greenCampus.stat1'),
 			stat2: t('projects.greenCampus.stat2'),
@@ -120,9 +113,10 @@ export default function RecentWorks() {
 								<Image
 									src={project.image}
 									alt={project.title}
-									fill
 									className="object-cover group-hover:scale-110 transition-transform duration-500"
+									fill
 								/>
+
 								<div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60" />
 								<div className="absolute top-4 left-4">
 									<span className="px-3 py-1 bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-semibold rounded-full">
@@ -141,47 +135,13 @@ export default function RecentWorks() {
 										<MapPin className="w-4 h-4" />
 										{project.location}
 									</div>
-									<div className="flex items-center gap-1">
-										<Calendar className="w-4 h-4" />
-										{project.date}
-									</div>
 								</div>
 								<p className="text-muted-foreground mb-6 leading-relaxed">
 									{project.description}
 								</p>
-
-								{/* Stats */}
-								<div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/50 rounded-lg">
-									<div className="text-center">
-										<div className="text-lg font-bold text-primary">
-											{project.stat1}
-										</div>
-									</div>
-									<div className="text-center">
-										<div className="text-lg font-bold text-primary">
-											{project.stat2}
-										</div>
-									</div>
-									<div className="text-center">
-										<div className="text-lg font-bold text-primary">
-											{project.stat3}
-										</div>
-									</div>
-								</div>
 							</div>
 						</motion.div>
 					))}
-				</div>
-
-				{/* CTA */}
-				<div className="text-center">
-					<Button
-						size="lg"
-						variant="outline"
-						className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-					>
-						{t('cta')} <ArrowRight className="w-4 h-4 ml-2" />
-					</Button>
 				</div>
 			</div>
 		</section>
