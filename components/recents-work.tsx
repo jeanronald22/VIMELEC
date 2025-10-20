@@ -42,7 +42,7 @@ export default function RecentWorks() {
 		},
 		{
 			title: t('projects.industrialUpgrade.title'),
-			image: '/projects/projet4.jpg',
+			image: '/projects/projet4.jpeg',
 			category: t('projects.industrialUpgrade.category'),
 			location: t('projects.industrialUpgrade.location'),
 			description: t('projects.industrialUpgrade.description'),
