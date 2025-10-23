@@ -143,6 +143,10 @@ export default async function Layout({
 						}),
 					}}
 				/>
+				<meta
+					name="google-site-verification"
+					content="Cpo6dOTwoPlYUk5HWf_wG5ZdjSQhMMzjvGQVqyLpwTs"
+				/>
 			</head>
 			<body
 				className={`font-sans ${playfair.variable} ${sourceSans.variable}`}
