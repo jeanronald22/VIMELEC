@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
 	const [isPending, startTransition] = useTransition();
 
 	const changeLanguage = (lang: string) => {
-		const newPath = pathname.replace(/^\/(fr|en)/, `/${lang}`);
+		const newPath = pathname.replace(/^\/(fr|en|zh|it)/, `/${lang}`);
 		startTransition(() => {
 			router.push(newPath);
 		});
@@ -19,12 +19,22 @@ export default function LanguageSwitcher() {
 		<div className="relative inline-block text-left">
 			<select
 				className="border  rounded-md  text-gray-800"
-				defaultValue={pathname.startsWith('/fr') ? 'fr' : 'en'}
+				defaultValue={
+					pathname.startsWith('/fr')
+						? 'fr'
+						: pathname.startsWith('/zh')
+						? 'zh'
+						: pathname.startsWith('/en')
+						? 'en'
+						: 'it'
+				}
 				onChange={(e) => changeLanguage(e.target.value)}
 				disabled={isPending}
 			>
 				<option value="en">🇬🇧</option>
 				<option value="fr">🇫🇷</option>
+				<option value="zh">🇨🇳</option>
+				<option value="it">🇮🇹</option>
 			</select>
 		</div>
 	);

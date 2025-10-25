@@ -1,0 +1,262 @@
+{
+	"Nav": {
+		"home": "Home",
+		"about": "Chi siamo",
+		"services": "Servizi",
+		"works": "Lavori recenti",
+		"contact": "Contatto",
+		"quote": "Richiedi un preventivo gratuito"
+	},
+	"Hero": {
+		"title": {
+			"line1": "Il tuo partner",
+			"line2": "in Energia e Manutenzione"
+		},
+		"subtitle": "Combiniamo tecnologia avanzata, ingegneria su misura e manutenzione esperta per garantire efficienza, sicurezza e prestazioni durature dei tuoi sistemi elettrici.",
+		"buttons": {
+			"contact": "Contattaci",
+			"learn": "Scopri di più"
+		},
+		"stats": {
+			"projects": "Progetti",
+			"satisfaction": "Soddisfazione",
+			"support": "Assistenza"
+		},
+		"card": {
+			"title": "Lavoro pulito",
+			"subtitle": "Duraturo ed efficiente"
+		}
+	},
+	"AboutUs": {
+		"badge": "Chi siamo",
+		"title": {
+			"line1": "Inizia la tua",
+			"line2": "trasformazione energetica"
+		},
+		"subtitle": "Pronto ad alimentare il tuo futuro? Contattaci oggi per una consulenza gratuita e scopri come possiamo aiutarti.",
+		"mainTitle": {
+			"line1": "All'avanguardia",
+			"line2": "dell'energia sostenibile"
+		},
+		"mainDescription": "In VIMELEC, ci impegniamo a trasformare il panorama energetico con soluzioni innovative e pratiche sostenibili. La nostra missione è fornire servizi di manutenzione affidabili, efficienti ed ecologici per un futuro migliore.",
+		"features": {
+			"innovation": {
+				"title": "Innovazione",
+				"description": "Tecnologia avanzata per soluzioni di manutenzione sostenibili"
+			},
+			"reliability": {
+				"title": "Affidabilità",
+				"description": "Scelto da migliaia di clienti in tutto il mondo"
+			},
+			"expertise": {
+				"title": "Competenza",
+				"description": "Oltre 10 anni di esperienza nel settore"
+			},
+			"excellence": {
+				"title": "Eccellenza",
+				"description": "Servizio e assistenza pluripremiati"
+			}
+		},
+		"card": {
+			"title": "Leader del settore",
+			"subtitle": "Riconosciuto per l'eccellenza nella fornitura di servizi di ingegneria e manutenzione elettrica sostenibile"
+		}
+	},
+	"Services": {
+		"sectionTitle": "Soluzioni di ingegneria e manutenzione",
+		"sectionSubtitle": "Dall'installazione alla manutenzione, offriamo soluzioni elettriche su misura per le tue esigenze",
+		"cta": "Richiedi una consulenza",
+
+		"electricalInstallation": {
+			"title": "Installazione elettrica",
+			"description": "Servizi professionali di installazione elettrica per abitazioni e aziende con tecnici certificati",
+			"feature1": "Cablaggio, test e messa in servizio",
+			"feature2": "Aggiornamento dei quadri elettrici",
+			"feature3": "Ispezioni di sicurezza"
+		},
+
+		"solarEnergy": {
+			"title": "Soluzioni di energia solare",
+			"description": "Sfrutta la potenza del sole con i nostri servizi di installazione e manutenzione di pannelli solari di ultima generazione",
+			"feature1": "Installazione di pannelli solari",
+			"feature2": "Sistemi di accumulo",
+			"feature3": "Integrazione alla rete"
+		},
+
+		"energyStorage": {
+			"title": "Sistemi di accumulo energetico",
+			"description": "Soluzioni avanzate di batterie per massimizzare l'indipendenza energetica e ridurre i costi",
+			"feature1": "Installazione di batterie",
+			"feature2": "Alimentazione di emergenza",
+			"feature3": "Gestione del carico"
+		},
+
+		"smartHome": {
+			"title": "Integrazione domotica",
+			"description": "Trasforma il tuo spazio con sistemi intelligenti di gestione dell'energia e dell'illuminazione per un'efficienza ottimale",
+			"feature1": "Illuminazione intelligente",
+			"feature2": "Automazione",
+			"feature3": "Monitoraggio energetico"
+		},
+
+		"maintenance": {
+			"title": "Manutenzione e assistenza",
+			"description": "Piani di manutenzione completi e supporto 24/7 per garantire sistemi sempre performanti",
+			"feature1": "Ispezioni regolari",
+			"feature2": "Diagnosi e manutenzione",
+			"feature3": "Manutenzione preventiva"
+		},
+
+		"energyConsulting": {
+			"title": "Consulenza energetica",
+			"description": "Analisi esperta e raccomandazioni per ottimizzare il consumo energetico e ridurre i costi operativi",
+			"feature1": "Audit energetici",
+			"feature2": "Analisi dei costi",
+			"feature3": "Pianificazione dell'efficienza"
+		}
+	},
+	"RecentWorks": {
+		"sectionTitle": "Portfolio",
+		"sectionSubtitle": "Pronto ad alimentare il tuo futuro? Contattaci oggi per una consulenza gratuita e scopri come possiamo aiutarti.",
+		"cta": "Vedi tutti i progetti",
+
+		"projects": {
+			"solarFarm": {
+				"title": "Test di isolamento di un trasformatore",
+				"location": "Camerun, CAMWATER",
+				"description": "Esecuzione di un test di isolamento e installazione di un trasformatore elevatore di tensione da 500 KVA per la rete principale.",
+				"category": "Energia elettrica",
+				"stat1": "Potenza: 500 KVA",
+				"stat2": "Durata: 2 settimane",
+				"stat3": "Squadra: 3 ingegneri"
+			},
+			"smartOffice": {
+				"title": "Manutenzione di un interruttore generale",
+				"location": "Burkina Faso, CMAFO",
+				"description": "Manutenzione completa dell'interruttore generale del quadro principale per garantire sicurezza e continuità elettrica.",
+				"category": "Energia elettrica",
+				"stat1": "Potenza: 630A",
+				"stat2": "Durata: 3 giorni",
+				"stat3": "Stato: Completato"
+			},
+			"residentialSolar": {
+				"title": "Installazione di un quadro industriale",
+				"location": "Douala, Camerun",
+				"description": "Installazione di un quadro di distribuzione per un sito industriale con ottimizzazione del cablaggio e test di sicurezza.",
+				"category": "Industriale",
+				"stat1": "Tensione: 400V",
+				"stat2": "Durata: 1 settimana",
+				"stat3": "Stato: Operativo"
+			},
+			"industrialUpgrade": {
+				"title": "Test di protezione con OMICRON CMC630",
+				"location": "Yaoundé, Camerun",
+				"description": "Verifica e calibrazione delle protezioni elettriche utilizzando OMICRON CMC630 per garantire l'affidabilità delle apparecchiature.",
+				"category": "Industriale",
+				"stat1": "Apparecchiatura: OMICRON CMC630",
+				"stat2": "Durata: 2 giorni",
+				"stat3": "Stato: Conforme"
+			},
+			"evCharging": {
+				"title": "Manutenzione di un DGPT2",
+				"location": "Bafoussam, Camerun",
+				"description": "Manutenzione del dispositivo di protezione DGPT2 su un trasformatore per garantire un migliore monitoraggio termico e dielettrico.",
+				"category": "Industriale",
+				"stat1": "Trasformatore: 250 KVA",
+				"stat2": "Durata: 1 giorno",
+				"stat3": "Stato: Completato"
+			},
+			"greenCampus": {
+				"title": "Sostituzione di un trasformatore con TGBT",
+				"location": "Garoua, Camerun",
+				"description": "Sostituzione di un vecchio trasformatore e modernizzazione del TGBT per migliorare le prestazioni energetiche del sito.",
+				"category": "Industriale",
+				"stat1": "Trasformatore: 630 KVA",
+				"stat2": "Durata: 5 giorni",
+				"stat3": "Stato: In servizio"
+			}
+		}
+	},
+	"Contact": {
+		"sectionTitle": "Contattaci",
+		"sectionTitleHighlight": "Inizia la tua trasformazione energetica",
+		"sectionSubtitle": "Pronto ad alimentare il tuo futuro? Contattaci oggi per una consulenza gratuita e scopri come possiamo aiutarti.",
+		"formTitle": "Inviaci un messaggio",
+		"firstNameLabel": "Nome",
+		"firstNamePlaceholder": "Giovanni",
+		"lastNameLabel": "Cognome",
+		"lastNamePlaceholder": "Rossi",
+		"emailLabel": "Email",
+		"emailPlaceholder": "giovanni@example.com",
+		"phoneLabel": "Numero di telefono",
+		"phonePlaceholder": "+237 650 618 211",
+		"serviceLabel": "Servizio di interesse",
+		"servicePlaceholder": "Seleziona un servizio",
+		"services": {
+			"electrical": "Installazione elettrica",
+			"solar": "Soluzioni di energia solare",
+			"storage": "Sistemi di accumulo energetico",
+			"smart": "Integrazione domotica",
+			"maintenance": "Manutenzione e assistenza",
+			"consulting": "Consulenza energetica"
+		},
+		"messageLabel": "Messaggio",
+		"messagePlaceholder": "Parlaci del tuo progetto...",
+		"sendButton": "Invia messaggio",
+		"infoTitle": "Informazioni di contatto",
+		"infoSubtitle": "Hai domande? Siamo qui per aiutarti. Contattaci tramite uno di questi canali e il nostro team ti risponderà rapidamente.",
+		"phone": {
+			"title": "Telefono",
+			"details": "+237 693 455 423",
+			"link": "tel:+237693455423"
+		},
+		"email": {
+			"title": "Email",
+			"details": "jeroboumg@gmail.com",
+			"link": "mailto:jeroboumg@gmail.com"
+		},
+		"office": {
+			"title": "Ufficio",
+			"details": "Yassa, Douala",
+			"link": "#"
+		},
+		"hours": {
+			"title": "Orari di apertura",
+			"details": "Lun-Ven: 8:00-18:00, Sab: 9:00-16:00",
+			"link": "#"
+		}
+	},
+	"Footer": {
+		"companyTitle": "Azienda",
+		"companyLinks": {
+			"about": { "name": "Chi siamo", "href": "#about" },
+			"services": { "name": "Servizi", "href": "#services" },
+			"recentWorks": { "name": "Lavori recenti", "href": "#recent-works" }
+		},
+		"servicesTitle": "Servizi",
+		"servicesLinks": {
+			"solar": { "name": "Installazione solare", "href": "#services" },
+			"audit": { "name": "Audit energetico", "href": "#services" },
+			"smartHome": { "name": "Domotica", "href": "#services" },
+			"maintenance": { "name": "Manutenzione", "href": "#services" }
+		},
+		"legalTitle": "Informazioni legali",
+		"legalLinks": {
+			"privacy": { "name": "Informativa sulla privacy", "href": "#" },
+			"terms": { "name": "Termini di utilizzo", "href": "#" }
+		},
+		"contactInfo": {
+			"phone": "+237 693 455 423",
+			"email": "contact@vimelec.com",
+			"address": "Yassa, Douala"
+		},
+		"social": {
+			"facebook": "Facebook",
+			"twitter": "Twitter",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram"
+		},
+		"copyright": "Tutti i diritti riservati.",
+		"poweredBy": "Creato da Jean Ronald"
+	}
+}
