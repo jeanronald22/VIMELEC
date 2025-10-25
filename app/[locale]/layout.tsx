@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 import { ThemeProvider } from 'next-themes';
 import { Loader2 } from 'lucide-react';
 import LoadMessage from '@/components/LoadMessage';
+import Script from 'next/script';
 
 const playfair = Inter({
 	subsets: ['latin'],
@@ -21,79 +22,57 @@ const sourceSans = Inter({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://vimelec.vercel.app'),
 	title: {
-		default:
-			'VIMELEC - Bright Solutions for Dark Problems | Electrical Services',
-		template: '%s | Vimelec',
+		default: 'VIMELEC | Vente, Ingénierie et Maintenance Électriques',
+		template: '%s | VIMELEC',
 	},
 	description:
-		'EnergyTech provides professional electrical services including solar panel installation, smart home automation, energy audits, and 24/7 emergency repairs. Trusted by thousands of customers for reliable energy solutions.',
+		"VIMELEC est une entreprise spécialisée dans la vente, l'ingénierie et la maintenance électriques au Cameroun. Nous proposons des solutions durables pour les particuliers et les entreprises.",
 	keywords: [
-		'electrical services',
-		'solar panel installation',
-		'smart home automation',
-		'energy audit',
-		'emergency electrical repair',
-		'EnergyTech',
-		'renewable energy',
-		'energy efficiency',
-		'electrical contractor',
-		'power solutions',
+		'électricité Cameroun',
+		'maintenance électrique',
+		'ingénierie énergétique',
+		'panneaux solaires',
+		'installation électrique',
+		'VIMELEC',
+		'électricien Douala',
 	],
-	authors: [{ name: 'Jean Ronald MBOUMGNI' }, { name: 'Vimelec' }],
-	creator: 'Ronald',
+	authors: [{ name: 'VIMELEC' }],
+	creator: 'VIMELEC',
 	publisher: 'VIMELEC',
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false,
-	},
-	metadataBase: new URL('https://vimelec.com'),
-	alternates: {
-		canonical: '/',
-	},
 	openGraph: {
-		title: 'VIMELEC - Bright Solutions for Dark Problems',
+		title: 'VIMELEC | Vente, Ingénierie et Maintenance Électriques',
 		description:
-			'Professional electrical services, solar installations, and smart home solutions. Available 24/7 for emergency repairs.',
-		url: 'https://vimelec.com',
+			"Entreprise d'électricité au Cameroun — VIMELEC fournit des services professionnels d’installation, de maintenance et d’ingénierie électrique pour particuliers et entreprises.",
+		url: 'https://vimelec.vercel.app',
 		siteName: 'VIMELEC',
+		locale: 'fr_FR',
+		type: 'website',
 		images: [
 			{
-				url: '/images/main-image.jpg',
+				url: '/images/og-vimelec.jpeg',
 				width: 1200,
 				height: 630,
-				alt: 'VIMELC - Professional Energy Solutions',
+				alt: 'VIMELEC — Électricité, Ingénierie et Maintenance',
 			},
 		],
-		locale: 'en_US',
-		type: 'website',
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'VIMELEC - Bright Solutions for Dark Problems',
+		title: 'VIMELEC | Ingénierie et Maintenance Électriques',
 		description:
-			'Professional electrical services, solar installations, and smart home solutions.',
-		images: ['/images/main-image.jpg'],
-		creator: '@energytech',
+			'Solutions électriques fiables au Cameroun : installation, ingénierie, maintenance. Découvrez les services professionnels de VIMELEC.',
+		images: ['/images/og-vimelec.jpeg'],
+		creator: '@vimelec',
 	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
+	alternates: {
+		canonical: 'https://vimelec.vercel.app',
+		languages: {
+			en: 'https://vimelec.vercel.app/en',
+			fr: 'https://vimelec.vercel.app/fr',
 		},
 	},
-	icons: {
-		icon: '/favicon.ico',
-		shortcut: '/favicon-16x16.png',
-		apple: '/apple-touch-icon.png',
-	},
-	// manifest: '/site.webmanifest', //TODO: a definir
 };
 
 export default async function Layout({
@@ -108,38 +87,28 @@ export default async function Layout({
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head>
-				<script
+				<Script
+					id="json-ld"
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
 							'@context': 'https://schema.org',
-							'@type': 'Organization',
+							'@type': 'LocalBusiness',
 							name: 'VIMELEC',
-							description:
-								'Professional electrical services and energy solutions',
-							url: 'https://vimelec.com',
-							logo: 'https://vimelec.com/images/logo.png',
-							contactPoint: {
-								'@type': 'ContactPoint',
-								telephone: '+237 657613211',
-								contactType: 'customer service',
-								areaServed: 'Fr',
-								availableLanguage: ['en', 'Fr'],
-							},
-							sameAs: [
-								'https://facebook.com/energytech',
-								'https://twitter.com/energytech',
-								'https://linkedin.com/company/energytech',
-								'https://instagram.com/energytech',
-							], //TODO: a definir
+							image: 'https://vimelec.vercel.app/images/og-vimelec.jpg',
+							'@id': 'https://vimelec.vercel.app',
+							url: 'https://vimelec.vercel.app',
+							telephone: '+237657613211',
 							address: {
 								'@type': 'PostalAddress',
-								streetAddress: '123 Energy Street',
-								addressLocality: 'Tech City',
-								addressRegion: 'TC',
-								postalCode: '12345',
-								addressCountry: 'US',
+								streetAddress: 'Douala, Cameroun',
+								addressLocality: 'Douala',
+								addressCountry: 'CM',
 							},
+							description:
+								"VIMELEC offre des services professionnels d'ingénierie, d'installation et de maintenance électrique au Cameroun.",
+							openingHours: 'Mo-Fr 08:00-17:00',
+							priceRange: '',
 						}),
 					}}
 				/>
