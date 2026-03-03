@@ -75,9 +75,9 @@ export default function RecentWorks() {
 	return (
 		<section
 			id="works"
-			className="relative py-24 bg-muted/30 overflow-hidden .section-padding"
+			className="relative py-24 bg-muted/30 overflow-hidden section-padding"
 		>
-			<div className="container mx-auto px-4">
+			<div className="max-w-7xl mx-auto w-full">
 				{/* Header */}
 				<motion.div
 					className="text-center mb-16"

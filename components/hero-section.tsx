@@ -1,17 +1,17 @@
 'use client';
 
-import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from './ui/button';
 
 export default function Hero() {
 	const t = useTranslations('Hero');
 	return (
 		<section
 			id="home"
-			className=" min-h-screen pt-20 .section-padding flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4 sm:px-6 lg:px-8 "
+			className="min-h-screen pt-20 section-padding flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5"
 		>
 			<div className="max-w-7xl mx-auto w-full">
 				<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -65,25 +65,27 @@ export default function Hero() {
 							className="flex flex-wrap gap-4"
 						>
 							{/* Lien vers la section #contact */}
-							<Link href="/#contact" scroll={true}>
-								<Button
-									size="lg"
-									className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
-								>
+							<Button
+								asChild
+								size="lg"
+								className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105"
+							>
+								<Link href="/#contact" scroll={true}>
 									{t('buttons.contact')}
-								</Button>
-							</Link>
+								</Link>
+							</Button>
 
 							{/* Lien vers la section #about */}
-							<Link href="/#about" scroll={true}>
-								<Button
-									size="lg"
-									variant="outline"
-									className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold px-8 py-6 text-base transition-all hover:scale-105 bg-transparent"
-								>
+							<Button
+								asChild
+								size="lg"
+								variant="outline"
+								className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold px-8 py-6 text-base transition-all hover:scale-105 bg-transparent"
+							>
+								<Link href="/#about" scroll={true}>
 									{t('buttons.learn')}
-								</Button>
-							</Link>
+								</Link>
+							</Button>
 						</motion.div>
 
 						{/* Stats */}
@@ -115,7 +117,7 @@ export default function Hero() {
 							</div>
 							<div>
 								<div className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary">
-									24/7
+									24H/7J
 								</div>
 								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
 									{t('stats.support')}

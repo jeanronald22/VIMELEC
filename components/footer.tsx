@@ -1,17 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import {
-	Mail,
-	Phone,
-	MapPin,
 	Facebook,
-	Twitter,
-	Linkedin,
 	Instagram,
+	Linkedin,
+	Mail,
+	MapPin,
+	Phone,
+	Twitter,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Footer() {
 	const t = useTranslations('Footer');
@@ -82,7 +82,7 @@ export default function Footer() {
 			{/* Decorative top border */}
 			<div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-			<div className="container mx-auto px-4 py-16">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
 					{/* Brand Section */}
 					<motion.div
@@ -102,9 +102,7 @@ export default function Footer() {
 						</Link>
 
 						<p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-							Powering tomorrow with innovative energy solutions.
-							We transform how you consume and manage energy for a
-							sustainable future.
+							{t('footerDescription')}
 						</p>
 
 						{/* Contact Info */}
@@ -239,7 +237,7 @@ export default function Footer() {
 						© {currentYear} VIMELEC. {t('copyright')}
 					</p>
 					<div className="flex items-center gap-2">
-						<a href="mailto:jeroboumg@gmail.com">
+						<a href="mailto:vimelec.tech@gmail.com">
 							<span>{t('poweredBy')}</span>
 						</a>
 					</div>

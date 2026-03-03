@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Shield, Users, Award } from 'lucide-react';
+import { Award, Shield, Users, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -34,7 +34,7 @@ export default function AboutUs() {
 	return (
 		<section
 			id="about"
-			className=" py-24 lg:py-32 overflow-hidden bg-background .section-padding"
+			className="relative py-24 lg:py-32 overflow-hidden bg-background section-padding"
 		>
 			{/* Background decoration */}
 			<div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5" />
@@ -65,7 +65,7 @@ export default function AboutUs() {
 				</p>
 			</motion.div>
 
-			<div className="container mx-auto px-4 relative z-10">
+			<div className="max-w-7xl mx-auto w-full relative z-10">
 				<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* Left side - Content */}
 					<motion.div
@@ -142,7 +142,7 @@ export default function AboutUs() {
 						<div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
 							<Image
 								src="/images/about-us.jpg"
-								alt="EnergyTech team and facilities"
+								alt="VIMELEC — Équipe et installations"
 								fill
 								className="object-cover"
 							/>

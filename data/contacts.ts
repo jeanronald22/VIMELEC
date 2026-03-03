@@ -7,7 +7,7 @@ export const contacts: ContactType[] = [
 		icon: Phone,
 	},
 	{
-		name: 'jeroboumg@gmail.com',
+		name: 'vimelec.tech@gmail.com',
 		icon: Mail,
 	},
 	{

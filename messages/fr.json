@@ -203,6 +203,8 @@
 		"messageLabel": "Message",
 		"messagePlaceholder": "Parlez-nous de votre projet...",
 		"sendButton": "Envoyer le message",
+		"successMessage": "Votre message a été envoyé avec succès ! Nous vous répondrons rapidement.",
+		"errorMessage": "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
 		"infoTitle": "Informations de contact",
 		"infoSubtitle": "Des questions ? Nous sommes là pour vous aider. Contactez-nous via l'un de ces canaux et notre équipe vous répondra rapidement.",
 		"phone": {
@@ -212,8 +214,8 @@
 		},
 		"email": {
 			"title": "Email",
-			"details": "jeroboumg@gmail.com",
-			"link": "mailto:jeroboumg@gmail.com"
+			"details": "vimelec.tech@gmail.com",
+			"link": "mailto:vimelec.tech@gmail.com"
 		},
 		"office": {
 			"title": "Bureau",
@@ -250,7 +252,7 @@
 		},
 		"contactInfo": {
 			"phone": "+237 693 455 423",
-			"email": "contact@vimelec.com",
+			"email": "vimelec.tech@gmail.com",
 			"address": "Yassa, Douala"
 		},
 		"social": {
@@ -259,6 +261,7 @@
 			"linkedin": "LinkedIn",
 			"instagram": "Instagram"
 		},
+		"footerDescription": "Alimenter l'avenir grâce à des solutions énergétiques innovantes. Nous transformons votre façon de consommer et gérer l'énergie pour un avenir durable.",
 		"copyright": "Tous droits réservés.",
 		"poweredBy": "Fait par Jean Ronald"
 	}
