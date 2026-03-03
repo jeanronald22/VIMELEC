@@ -1,30 +1,19 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import {
-	motion,
-	AnimatePresence,
-	useScroll,
-	useTransform,
-} from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { ModeToggle } from '@/components/mode-toggle';
+import { Button } from '@/components/ui/button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useEffect, useMemo, useState } from 'react';
 import LanguageSwitcher from './ChangeLang';
 
 export function NavBar() {
 	const t = useTranslations('Nav');
 	const [isOpen, setIsOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState('home');
-	const { scrollY } = useScroll();
-
-	const navBackground = useTransform(
-		scrollY,
-		[0, 100],
-		['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)']
-	);
+	const [scrolled, setScrolled] = useState(false);
 
 	const navItems = useMemo(
 		() => [
@@ -39,6 +28,7 @@ export function NavBar() {
 
 	useEffect(() => {
 		const handleScroll = () => {
+			setScrolled(window.scrollY > 50);
 			const current = navItems.find((item) => {
 				const element = document.getElementById(item.id);
 				if (element) {
@@ -56,10 +46,9 @@ export function NavBar() {
 
 	return (
 		<motion.nav
-			className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border/40"
-			style={{
-				backgroundColor: navBackground,
-			}}
+			className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border/40 transition-colors duration-300 ${
+				scrolled ? 'bg-background/80' : 'bg-transparent'
+			}`}
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -149,6 +138,7 @@ export function NavBar() {
 							onClick={() => setIsOpen(!isOpen)}
 							className="p-2 rounded-lg hover:bg-muted transition-colors"
 							whileTap={{ scale: 0.9 }}
+							aria-label="Toggle menu"
 						>
 							<AnimatePresence mode="wait">
 								{isOpen ? (
@@ -219,12 +209,18 @@ export function NavBar() {
 									delay: navItems.length * 0.05,
 								}}
 							>
-								<Button
-									className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold shadow-lg"
-									size="lg"
+								<Link
+									href="/#contact"
+									scroll={true}
+									onClick={() => setIsOpen(false)}
 								>
-									{t('quote')}
-								</Button>
+									<Button
+										className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold shadow-lg"
+										size="lg"
+									>
+										{t('quote')}
+									</Button>
+								</Link>
 							</motion.div>
 						</div>
 					</motion.div>

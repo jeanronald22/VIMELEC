@@ -203,6 +203,8 @@
 		"messageLabel": "留言",
 		"messagePlaceholder": "告诉我们您的项目…",
 		"sendButton": "发送信息",
+		"successMessage": "您的消息已成功发送！我们会尽快回复您。",
+		"errorMessage": "发送过程中出现错误，请重试。",
 		"infoTitle": "联系方式",
 		"infoSubtitle": "有疑问？我们随时为您提供帮助。通过以下方式与我们联系。",
 		"phone": {
@@ -212,8 +214,8 @@
 		},
 		"email": {
 			"title": "电子邮件",
-			"details": "jeroboumg@gmail.com",
-			"link": "mailto:jeroboumg@gmail.com"
+			"details": "vimelec.tech@gmail.com",
+			"link": "mailto:vimelec.tech@gmail.com"
 		},
 		"office": {
 			"title": "办公地点",
@@ -250,7 +252,7 @@
 		},
 		"contactInfo": {
 			"phone": "+237 693 455 423",
-			"email": "contact@vimelec.com",
+			"email": "vimelec.tech@gmail.com",
 			"address": "喀麦隆 杜阿拉 Yassa"
 		},
 		"social": {
@@ -259,6 +261,7 @@
 			"linkedin": "LinkedIn",
 			"instagram": "Instagram"
 		},
+		"footerDescription": "以创新能源方案驱动未来，助您实现可持续的能源消费与管理。",
 		"copyright": "版权所有。",
 		"poweredBy": "由 Jean Ronald 制作"
 	}

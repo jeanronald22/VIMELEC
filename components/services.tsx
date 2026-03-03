@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Sun, Battery, Lightbulb, Shield, TrendingUp } from 'lucide-react';
-import { Button } from './ui/button';
+import { Battery, Lightbulb, Shield, Sun, TrendingUp, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Button } from './ui/button';
 
 export default function Services() {
 	const t = useTranslations('Services');
@@ -74,14 +74,14 @@ export default function Services() {
 	return (
 		<section
 			id="services"
-			className="relative py-24 bg-background .section-padding"
+			className="relative py-24 bg-background section-padding"
 		>
 			{/* Décorations */}
 			<div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5 pointer-events-none" />
 			<div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 			<div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
 
-			<div className="container mx-auto px-4 relative z-10">
+			<div className="max-w-7xl mx-auto w-full relative z-10">
 				{/* Header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -140,10 +140,11 @@ export default function Services() {
 				{/* CTA */}
 				<div className="text-center">
 					<Button
+						asChild
 						size="lg"
 						className="bg-primary hover:opacity-90 text-white"
 					>
-						{t('cta')}
+						<a href="#contact">{t('cta')}</a>
 					</Button>
 				</div>
 			</div>

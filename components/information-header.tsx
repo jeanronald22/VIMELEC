@@ -1,4 +1,4 @@
-import { contacts } from '@/data/contats';
+import { contacts } from '@/data/contacts';
 import Image from 'next/image';
 import Link from 'next/link';
 

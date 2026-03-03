@@ -1,26 +1,39 @@
 'use client';
 
+import sendEmail from '@/services/sendEmail';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, Loader2 } from 'lucide-react';
+import {
+	AlertCircle,
+	CheckCircle2,
+	Clock,
+	Loader2,
+	Mail,
+	MapPin,
+	Phone,
+	Send,
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { FormEvent, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { useTranslations } from 'next-intl';
-import sendEmail from '@/services/sendEmail';
-import { FormEvent, useState } from 'react';
 
 export default function Contact() {
 	const t = useTranslations('Contact');
 	const [loading, setLoading] = useState(false);
+	const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+	const formRef = useRef<HTMLFormElement>(null);
+
 	const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setStatus('idle');
+		setLoading(true);
 		try {
-			setLoading(true);
-			e.preventDefault();
 			await sendEmail(e.currentTarget);
-			setLoading(false);
-			window.alert('message envoyer avec success');
-		} catch (e) {
-			console.log(e);
+			setStatus('success');
+			formRef.current?.reset();
+		} catch {
+			setStatus('error');
 		} finally {
 			setLoading(false);
 		}
@@ -56,12 +69,12 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="relative py-24 bg-background overflow-hidden .section-padding"
+			className="relative py-24 bg-background overflow-hidden section-padding"
 		>
 			<div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
 			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
-			<div className="container mx-auto px-4 relative z-10">
+			<div className="max-w-7xl mx-auto w-full relative z-10">
 				{/* Header */}
 				<motion.div
 					className="text-center mb-16"
@@ -93,7 +106,35 @@ export default function Contact() {
 						<h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-6">
 							{t('formTitle')}
 						</h3>
+
+						{/* Status Messages */}
+						{status === 'success' && (
+							<motion.div
+								initial={{ opacity: 0, y: -10 }}
+								animate={{ opacity: 1, y: 0 }}
+								className="flex items-center gap-3 p-4 mb-6 rounded-lg bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400"
+							>
+								<CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+								<p className="text-sm font-medium">
+									{t('successMessage')}
+								</p>
+							</motion.div>
+						)}
+						{status === 'error' && (
+							<motion.div
+								initial={{ opacity: 0, y: -10 }}
+								animate={{ opacity: 1, y: 0 }}
+								className="flex items-center gap-3 p-4 mb-6 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive"
+							>
+								<AlertCircle className="w-5 h-5 flex-shrink-0" />
+								<p className="text-sm font-medium">
+									{t('errorMessage')}
+								</p>
+							</motion.div>
+						)}
+
 						<form
+							ref={formRef}
 							className="space-y-6"
 							onSubmit={(e) => onSubmit(e)}
 						>
@@ -110,6 +151,7 @@ export default function Contact() {
 										placeholder={t('firstNamePlaceholder')}
 										className="w-full"
 										name="firstName"
+										required
 									/>
 								</div>
 								<div>
@@ -124,6 +166,7 @@ export default function Contact() {
 										placeholder={t('lastNamePlaceholder')}
 										className="w-full"
 										name="lastName"
+										required
 									/>
 								</div>
 							</div>
@@ -141,6 +184,7 @@ export default function Contact() {
 									placeholder={t('emailPlaceholder')}
 									className="w-full"
 									name="email"
+									required
 								/>
 							</div>
 
@@ -171,6 +215,7 @@ export default function Contact() {
 									id="service"
 									className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
 									name="service"
+									required
 								>
 									<option value="">
 										{t('servicePlaceholder')}
@@ -209,19 +254,21 @@ export default function Contact() {
 									rows={5}
 									className="w-full resize-none"
 									name="message"
+									required
 								/>
 							</div>
 
 							<Button
 								type="submit"
 								size="lg"
+								disabled={loading}
 								className="w-full bg-primary hover:opacity-90 transition-opacity text-white"
 							>
 								{loading && (
-									<Loader2 className="animate-spin" />
+									<Loader2 className="animate-spin mr-2" />
 								)}
 								{t('sendButton')}{' '}
-								<Send className="w-4 h-4 ml-2" />
+								{!loading && <Send className="w-4 h-4 ml-2" />}
 							</Button>
 						</form>
 					</motion.div>

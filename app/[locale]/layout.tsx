@@ -1,21 +1,21 @@
-import type React from 'react';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
-import '../globals.css';
-import { Suspense } from 'react';
-import { ThemeProvider } from 'next-themes';
-import { Loader2 } from 'lucide-react';
 import LoadMessage from '@/components/LoadMessage';
+import { Analytics } from '@vercel/analytics/next';
+import { Loader2 } from 'lucide-react';
+import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
+import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import Script from 'next/script';
+import type React from 'react';
+import { Suspense } from 'react';
+import '../globals.css';
 
-const playfair = Inter({
+const playfair = Playfair_Display({
 	subsets: ['latin'],
 	weight: ['700'],
 	variable: '--font-playfair',
 });
 
-const sourceSans = Inter({
+const sourceSans = Source_Sans_3({
 	subsets: ['latin'],
 	weight: ['400', '600'],
 	variable: '--font-source-sans',
@@ -71,6 +71,8 @@ export const metadata: Metadata = {
 		languages: {
 			en: 'https://vimelec.vercel.app/en',
 			fr: 'https://vimelec.vercel.app/fr',
+			it: 'https://vimelec.vercel.app/it',
+			zh: 'https://vimelec.vercel.app/zh',
 		},
 	},
 };
@@ -95,10 +97,10 @@ export default async function Layout({
 							'@context': 'https://schema.org',
 							'@type': 'LocalBusiness',
 							name: 'VIMELEC',
-							image: 'https://vimelec.vercel.app/images/og-vimelec.jpg',
+							image: 'https://vimelec.vercel.app/images/og-vimelec.jpeg',
 							'@id': 'https://vimelec.vercel.app',
 							url: 'https://vimelec.vercel.app',
-							telephone: '+237657613211',
+							telephone: '+237693455423',
 							address: {
 								'@type': 'PostalAddress',
 								streetAddress: 'Douala, Cameroun',
@@ -108,7 +110,7 @@ export default async function Layout({
 							description:
 								"VIMELEC offre des services professionnels d'ingénierie, d'installation et de maintenance électrique au Cameroun.",
 							openingHours: 'Mo-Fr 08:00-17:00',
-							priceRange: '',
+							priceRange: '$$',
 						}),
 					}}
 				/>

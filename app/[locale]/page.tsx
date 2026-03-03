@@ -10,11 +10,13 @@ export default function Home() {
 	return (
 		<div className="min-h-screen">
 			<NavBar />
-			<Hero />
-			<AboutUs />
-			<Services />
-			<RecentWorks />
-			<Contact />
+			<main>
+				<Hero />
+				<AboutUs />
+				<Services />
+				<RecentWorks />
+				<Contact />
+			</main>
 			<Footer />
 		</div>
 	);
