@@ -64,7 +64,7 @@ export function NavBar() {
 					>
 						<Link
 							href="/"
-							className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-primary"
+							className="text-2xl font-bold font-heading text-primary"
 						>
 							VIMELEC
 						</Link>
@@ -76,7 +76,7 @@ export function NavBar() {
 							<motion.a
 								key={item.id}
 								href={item.href}
-								className="relative px-4 py-2 text-sm font-medium font-[family-name:var(--font-source-sans)] text-foreground/80 transition-colors hover:text-primary"
+								className="relative px-4 py-2 text-sm font-medium font-sans text-foreground/80 transition-colors hover:text-primary"
 								initial={{ opacity: 0, y: -20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{
@@ -115,13 +115,11 @@ export function NavBar() {
 							initial={{ opacity: 0, x: 20 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.6, delay: 0.7 }}
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
 						>
 							<Link href="/#contact" scroll={true}>
 								<Button
-									className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-									size="lg"
+									className="bg-accent text-accent-foreground rounded-full px-6 hover:bg-accent/90 font-semibold shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/40 transition-all duration-300 hover:-translate-y-[2px]"
+									size="default"
 								>
 									{t('quote')}
 								</Button>
@@ -186,7 +184,7 @@ export function NavBar() {
 								<motion.a
 									key={item.id}
 									href={item.href}
-									className="block px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-source-sans)] text-foreground/80 hover:text-primary hover:bg-muted transition-all"
+									className="block px-4 py-3 rounded-lg text-base font-medium font-sans text-foreground/80 hover:text-primary hover:bg-muted transition-all"
 									onClick={() => setIsOpen(false)}
 									initial={{ x: -20, opacity: 0 }}
 									animate={{ x: 0, opacity: 1 }}

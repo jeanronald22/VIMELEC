@@ -30,7 +30,7 @@ export default function Hero() {
 								delay: 0.2,
 								ease: [0.22, 1, 0.36, 1],
 							}}
-							className="text-5xl sm:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-playfair)] text-balance leading-tight"
+							className="text-5xl sm:text-6xl lg:text-7xl font-bold font-heading text-balance leading-tight"
 						>
 							<span className="bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent ">
 								{t('title.line1')}
@@ -49,7 +49,7 @@ export default function Hero() {
 								delay: 0.4,
 								ease: [0.22, 1, 0.36, 1],
 							}}
-							className="text-lg sm:text-xl text-muted-foreground font-[family-name:var(--font-source-sans)] leading-relaxed text-pretty max-w-xl"
+							className="text-lg sm:text-xl text-muted-foreground font-sans leading-relaxed text-pretty max-w-xl"
 						>
 							{t('subtitle')}
 						</motion.p>
@@ -100,26 +100,26 @@ export default function Hero() {
 							className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50"
 						>
 							<div>
-								<div className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary">
+								<div className="text-3xl font-bold font-heading text-primary">
 									50+
 								</div>
-								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
+								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.projects')}
 								</div>
 							</div>
 							<div>
-								<div className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary">
+								<div className="text-3xl font-bold font-heading text-primary">
 									98%
 								</div>
-								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
+								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.satisfaction')}
 								</div>
 							</div>
 							<div>
-								<div className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary">
+								<div className="text-3xl font-bold font-heading text-primary">
 									24H/7J
 								</div>
-								<div className="text-sm text-muted-foreground font-[family-name:var(--font-source-sans)]">
+								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.support')}
 								</div>
 							</div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Battery, Lightbulb, Shield, Sun, TrendingUp, Zap } from 'lucide-react';
+import { Battery, Lightbulb, Shield, Sun, TrendingUp, Zap, Laptop } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from './ui/button';
 
@@ -69,6 +69,16 @@ export default function Services() {
 				t('energyConsulting.feature3'),
 			],
 		},
+		{
+			icon: Laptop,
+			title: t('itServices.title'),
+			description: t('itServices.description'),
+			features: [
+				t('itServices.feature1'),
+				t('itServices.feature2'),
+				t('itServices.feature3'),
+			],
+		},
 	];
 
 	return (
@@ -93,10 +103,10 @@ export default function Services() {
 					<motion.span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
 						{t('sectionTitle')}
 					</motion.span>
-					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
 						{t('sectionTitle')}
 					</h2>
-					<p className="text-lg text-muted-foreground font-[family-name:var(--font-source-sans)] max-w-2xl mx-auto text-pretty">
+					<p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto text-pretty">
 						{t('sectionSubtitle')}
 					</p>
 				</motion.div>
@@ -111,7 +121,7 @@ export default function Services() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 							whileHover={{ y: -8 }}
-							className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
+							className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300"
 						>
 							<div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg">
 								<service.icon className="w-7 h-7 text-white" />
@@ -142,7 +152,7 @@ export default function Services() {
 					<Button
 						asChild
 						size="lg"
-						className="bg-primary hover:opacity-90 text-white"
+						className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1"
 					>
 						<a href="#contact">{t('cta')}</a>
 					</Button>

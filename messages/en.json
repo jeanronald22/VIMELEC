@@ -10,9 +10,9 @@
 	"Hero": {
 		"title": {
 			"line1": "Your Partner",
-			"line2": "in Energy & Maintenance"
+			"line2": "in Engineering & Technology"
 		},
-		"subtitle": "We combine advanced technology, tailored engineering, and expert maintenance to ensure efficiency, safety, and lasting performance of your electrical systems.",
+		"subtitle": "We blend electrical expertise, smart automation, and digital transformation to power your business growth.",
 		"buttons": {
 			"contact": "Contact Us",
 			"learn": "Learn More"
@@ -28,17 +28,17 @@
 		}
 	},
 	"AboutUs": {
-		"badge": "About",
+		"badge": "Who We Are",
 		"title": {
-			"line1": "Start Your",
-			"line2": "Energy Transformation"
+			"line1": "Let's drive your",
+			"line2": "tech transition together"
 		},
-		"subtitle": "Ready to power your future? Contact us today for a free consultation and discover how we can help you.",
+		"subtitle": "From electrical infrastructure to software optimization, VIMELEC is the technical partner you can rely on.",
 		"mainTitle": {
-			"line1": "At the forefront of",
-			"line2": "Sustainable Energy"
+			"line1": "The perfect blend of",
+			"line2": "Energy & Innovation"
 		},
-		"mainDescription": "At VIMELEC, we are committed to transforming the energy landscape through innovative solutions and sustainable practices. Our mission is to provide reliable, efficient, and eco-friendly maintenance services for a better future.",
+		"mainDescription": "At VIMELEC, we are reinventing modern engineering by fusing our core electrical expertise with cutting-edge technological solutions. Our mission: to deliver reliable, high-performance, and connected infrastructures.",
 		"features": {
 			"innovation": {
 				"title": "Innovation",
@@ -113,6 +113,14 @@
 			"feature1": "Energy audits",
 			"feature2": "Cost analysis",
 			"feature3": "Efficiency planning"
+		},
+
+		"itServices": {
+			"title": "Technology & Digital Transformation",
+			"description": "Empower your business with our modern tech solutions: custom software development, business process automation, and digital strategy.",
+			"feature1": "Custom enterprise applications",
+			"feature2": "Business automation & AI",
+			"feature3": "Digital transformation consulting"
 		}
 	},
 	"RecentWorks": {
@@ -198,7 +206,8 @@
 			"storage": "Energy Storage Systems",
 			"smart": "Smart Home Integration",
 			"maintenance": "Maintenance & Support",
-			"consulting": "Energy Consulting"
+			"consulting": "Energy Consulting",
+			"it": "Technology & Digital Transformation"
 		},
 		"messageLabel": "Message",
 		"messagePlaceholder": "Tell us about your project...",
@@ -238,12 +247,12 @@
 				"href": "#recent-works"
 			}
 		},
-		"servicesTitle": "Services",
+		"servicesTitle": "Expertise",
 		"servicesLinks": {
-			"solar": { "name": "Solar Installation", "href": "#services" },
-			"audit": { "name": "Energy Audit", "href": "#services" },
-			"smartHome": { "name": "Home Automation", "href": "#services" },
-			"maintenance": { "name": "Maintenance", "href": "#services" }
+			"electrical": { "name": "Electrical Installation", "href": "#services" },
+			"it": { "name": "Technology & Digital", "href": "#services" },
+			"solar": { "name": "Solar Solutions", "href": "#services" },
+			"maintenance": { "name": "Industrial Maintenance", "href": "#services" }
 		},
 		"legalTitle": "Legal",
 		"legalLinks": {
@@ -255,13 +264,7 @@
 			"email": "vimelec.tech@gmail.com",
 			"address": "Yassa, Douala"
 		},
-		"social": {
-			"facebook": "Facebook",
-			"twitter": "Twitter",
-			"linkedin": "LinkedIn",
-			"instagram": "Instagram"
-		},
-		"footerDescription": "Powering tomorrow with innovative energy solutions. We transform how you consume and manage energy for a sustainable future.",
+		"footerDescription": "Your strategic partner in engineering and technological solutions. We build connected, sustainable, and high-performance infrastructures.",
 		"copyright": "All rights reserved.",
 		"poweredBy": "Made by Jean Ronald"
 	}
