@@ -54,13 +54,14 @@ export default function AboutUs() {
 				>
 					{t('badge')}
 				</motion.span>
-				<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance">
+				<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
 					{t('title.line1')}
+					{' '}
 					<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
 						{t('title.line2')}
 					</span>
 				</h2>
-				<p className="text-lg text-muted-foreground font-[family-name:var(--font-source-sans)] max-w-2xl mx-auto text-pretty">
+				<p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto text-pretty">
 					{t('subtitle')}
 				</p>
 			</motion.div>
@@ -79,9 +80,10 @@ export default function AboutUs() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.3 }}
-							className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance"
+							className="text-4xl lg:text-5xl font-bold font-heading mb-6 text-balance"
 						>
 							{t('mainTitle.line1')}
+							{' '}
 							<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
 								{t('mainTitle.line2')}
 							</span>

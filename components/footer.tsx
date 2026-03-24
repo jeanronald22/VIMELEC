@@ -2,13 +2,9 @@
 
 import { motion } from 'framer-motion';
 import {
-	Facebook,
-	Instagram,
-	Linkedin,
 	Mail,
 	MapPin,
 	Phone,
-	Twitter,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -36,16 +32,16 @@ export default function Footer() {
 	// 🔹 Services Links
 	const servicesLinks = [
 		{
+			name: t('servicesLinks.electrical.name'),
+			href: t('servicesLinks.electrical.href'),
+		},
+		{
+			name: t('servicesLinks.it.name'),
+			href: t('servicesLinks.it.href'),
+		},
+		{
 			name: t('servicesLinks.solar.name'),
 			href: t('servicesLinks.solar.href'),
-		},
-		{
-			name: t('servicesLinks.audit.name'),
-			href: t('servicesLinks.audit.href'),
-		},
-		{
-			name: t('servicesLinks.smartHome.name'),
-			href: t('servicesLinks.smartHome.href'),
 		},
 		{
 			name: t('servicesLinks.maintenance.name'),
@@ -67,14 +63,6 @@ export default function Footer() {
 		{ icon: Phone, text: t('contactInfo.phone') },
 		{ icon: Mail, text: t('contactInfo.email') },
 		{ icon: MapPin, text: t('contactInfo.address') },
-	];
-
-	// 🔹 Social Links
-	const socialLinks = [
-		{ icon: Facebook, href: '#', label: t('social.facebook') },
-		{ icon: Twitter, href: '#', label: t('social.twitter') },
-		{ icon: Linkedin, href: '#', label: t('social.linkedin') },
-		{ icon: Instagram, href: '#', label: t('social.instagram') },
 	];
 
 	return (
@@ -201,29 +189,6 @@ export default function Footer() {
 						</ul>
 					</motion.div>
 				</div>
-
-				{/* Social Links */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.5, delay: 0.4 }}
-					className="flex justify-center gap-4 mb-8 pb-8 border-b border-border/50"
-				>
-					{socialLinks.map((social, index) => (
-						<Link
-							key={index}
-							href={social.href}
-							aria-label={social.label}
-							className="group relative"
-						>
-							<div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-							<div className="relative h-10 w-10 rounded-full border border-border/50 flex items-center justify-center bg-background/50 backdrop-blur-sm group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300">
-								<social.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-							</div>
-						</Link>
-					))}
-				</motion.div>
 
 				{/* Bottom Bar */}
 				<motion.div

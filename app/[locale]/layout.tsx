@@ -3,48 +3,49 @@ import { Analytics } from '@vercel/analytics/next';
 import { Loader2 } from 'lucide-react';
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import Script from 'next/script';
 import type React from 'react';
 import { Suspense } from 'react';
 import '../globals.css';
 
-const playfair = Playfair_Display({
+const outfit = Outfit({
 	subsets: ['latin'],
-	weight: ['700'],
-	variable: '--font-playfair',
+	weight: ['400', '500', '600', '700'],
+	variable: '--font-outfit',
 });
 
-const sourceSans = Source_Sans_3({
+const inter = Inter({
 	subsets: ['latin'],
-	weight: ['400', '600'],
-	variable: '--font-source-sans',
+	weight: ['400', '500', '600'],
+	variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://vimelec.vercel.app'),
 	title: {
-		default: 'VIMELEC | Vente, Ingénierie et Maintenance Électriques',
+		default: 'VIMELEC | Ingénierie, Électricité & Technologie Digitale',
 		template: '%s | VIMELEC',
 	},
 	description:
-		"VIMELEC est une entreprise spécialisée dans la vente, l'ingénierie et la maintenance électriques au Cameroun. Nous proposons des solutions durables pour les particuliers et les entreprises.",
+		"Votre partenaire B2B en ingénierie au Cameroun. VIMELEC allie expertise électrique, domotique et développement technologique pour des infrastructures performantes et connectées.",
 	keywords: [
-		'électricité Cameroun',
-		'maintenance électrique',
-		'ingénierie énergétique',
-		'panneaux solaires',
-		'installation électrique',
+		'ingénierie électrique Cameroun',
+		'solutions technologiques Douala',
+		'développement logiciel',
+		'transformation digitale',
+		'maintenance industrielle',
+		'installation solaire',
+		'domotique',
 		'VIMELEC',
-		'électricien Douala',
 	],
 	authors: [{ name: 'VIMELEC' }],
 	creator: 'VIMELEC',
 	publisher: 'VIMELEC',
 	openGraph: {
-		title: 'VIMELEC | Vente, Ingénierie et Maintenance Électriques',
+		title: 'VIMELEC | Ingénierie, Énergie & Innovation Digitale',
 		description:
-			"Entreprise d'électricité au Cameroun — VIMELEC fournit des services professionnels d’installation, de maintenance et d’ingénierie électrique pour particuliers et entreprises.",
+			"Au Cameroun, VIMELEC fusionne le savoir-faire électrique à l'innovation logicielle pour offrir des infrastructures modernes et optimisées pour les entreprises.",
 		url: 'https://vimelec.vercel.app',
 		siteName: 'VIMELEC',
 		locale: 'fr_FR',
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'VIMELEC | Ingénierie et Maintenance Électriques',
+		title: 'VIMELEC | Énergie & Solutions Technologiques',
 		description:
-			'Solutions électriques fiables au Cameroun : installation, ingénierie, maintenance. Découvrez les services professionnels de VIMELEC.',
+			"Découvrez nos services B2B : Ingénierie électrique, installations solaires, domotique et développement technologique sur mesure.",
 		images: ['/images/og-vimelec.jpeg'],
 		creator: '@vimelec',
 	},
@@ -71,8 +72,6 @@ export const metadata: Metadata = {
 		languages: {
 			en: 'https://vimelec.vercel.app/en',
 			fr: 'https://vimelec.vercel.app/fr',
-			it: 'https://vimelec.vercel.app/it',
-			zh: 'https://vimelec.vercel.app/zh',
 		},
 	},
 };
@@ -108,7 +107,7 @@ export default async function Layout({
 								addressCountry: 'CM',
 							},
 							description:
-								"VIMELEC offre des services professionnels d'ingénierie, d'installation et de maintenance électrique au Cameroun.",
+								"VIMELEC accompagne les entreprises avec des solutions expertes en ingénierie, maintenance électrique, et développement technologique au Cameroun.",
 							openingHours: 'Mo-Fr 08:00-17:00',
 							priceRange: '$$',
 						}),
@@ -120,7 +119,7 @@ export default async function Layout({
 				/>
 			</head>
 			<body
-				className={`font-sans ${playfair.variable} ${sourceSans.variable}`}
+				className={`font-sans ${inter.variable} ${outfit.variable}`}
 			>
 				<LoadMessage locale={locale}>
 					<Suspense
