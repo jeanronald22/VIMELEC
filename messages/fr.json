@@ -10,9 +10,9 @@
 	"Hero": {
 		"title": {
 			"line1": "Votre Partenaire",
-			"line2": "en Énergie & Maintenance"
+			"line2": "en Ingénierie & Technologie"
 		},
-		"subtitle": "Nous combinons technologie avancée, ingénierie sur mesure et maintenance experte pour assurer efficacité, sécurité et performance durable de vos systèmes électriques.",
+		"subtitle": "Nous combinons expertise électrique, automatisation industrielle et transformation digitale pour propulser la croissance de votre entreprise.",
 		"buttons": {
 			"contact": "Contactez-nous",
 			"learn": "En savoir plus"
@@ -28,17 +28,17 @@
 		}
 	},
 	"AboutUs": {
-		"badge": "À propos",
+		"badge": "Qui sommes-nous ?",
 		"title": {
-			"line1": "Commencez votre",
-			"line2": "transformation énergétique"
+			"line1": "Pilotons ensemble votre",
+			"line2": "transition technologique"
 		},
-		"subtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
+		"subtitle": "De l'infrastructure électrique à l'optimisation logicielle, VIMELEC est le partenaire technique sur lequel vous pouvez compter.",
 		"mainTitle": {
-			"line1": "À la pointe de",
-			"line2": "l'énergie durable"
+			"line1": "L'alliance parfaite entre",
+			"line2": "Énergie & Innovation"
 		},
-		"mainDescription": "Chez VIMELEC, nous nous engageons à transformer le paysage énergétique grâce à des solutions innovantes et des pratiques durables. Notre mission est de fournir des services de maintenance fiables, efficaces et écologiques pour un avenir meilleur.",
+		"mainDescription": "Chez VIMELEC, nous réinventons l'ingénierie moderne en fusionnant notre savoir-faire électrique reconnu avec des solutions technologiques de pointe. Notre mission : fournir des infrastructures fiables, hautement performantes et connectées.",
 		"features": {
 			"innovation": {
 				"title": "Innovation",
@@ -113,6 +113,14 @@
 			"feature1": "Audits énergétiques",
 			"feature2": "Analyse des coûts",
 			"feature3": "Planification de l'efficacité"
+		},
+
+		"itServices": {
+			"title": "Technologie & Transformation Digitale",
+			"description": "Propulsez votre entreprise avec nos solutions technologiques : développement de logiciels sur mesure, automatisation des processus métier et stratégie numérique.",
+			"feature1": "Développement d'applications métier",
+			"feature2": "Automatisation & IA pour l'entreprise",
+			"feature3": "Conseil en transformation digitale"
 		}
 	},
 	"RecentWorks": {
@@ -198,7 +206,8 @@
 			"storage": "Systèmes de stockage d'énergie",
 			"smart": "Intégration domotique",
 			"maintenance": "Maintenance & support",
-			"consulting": "Conseil énergétique"
+			"consulting": "Conseil énergétique",
+			"it": "Technologie & Transformation Digitale"
 		},
 		"messageLabel": "Message",
 		"messagePlaceholder": "Parlez-nous de votre projet...",
@@ -238,12 +247,12 @@
 				"href": "#recent-works"
 			}
 		},
-		"servicesTitle": "Services",
+		"servicesTitle": "Expertises",
 		"servicesLinks": {
-			"solar": { "name": "Installation solaire", "href": "#services" },
-			"audit": { "name": "Audit énergétique", "href": "#services" },
-			"smartHome": { "name": "Domotique", "href": "#services" },
-			"maintenance": { "name": "Maintenance", "href": "#services" }
+			"electrical": { "name": "Installation Électrique", "href": "#services" },
+			"it": { "name": "Technologie & Digital", "href": "#services" },
+			"solar": { "name": "Solutions Solaires", "href": "#services" },
+			"maintenance": { "name": "Maintenance Industrielle", "href": "#services" }
 		},
 		"legalTitle": "Mentions légales",
 		"legalLinks": {
@@ -255,13 +264,7 @@
 			"email": "vimelec.tech@gmail.com",
 			"address": "Yassa, Douala"
 		},
-		"social": {
-			"facebook": "Facebook",
-			"twitter": "Twitter",
-			"linkedin": "LinkedIn",
-			"instagram": "Instagram"
-		},
-		"footerDescription": "Alimenter l'avenir grâce à des solutions énergétiques innovantes. Nous transformons votre façon de consommer et gérer l'énergie pour un avenir durable.",
+		"footerDescription": "Votre partenaire stratégique en ingénierie et solutions technologiques. Nous bâtissons des infrastructures connectées, durables et performantes.",
 		"copyright": "Tous droits réservés.",
 		"poweredBy": "Fait par Jean Ronald"
 	}

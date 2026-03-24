@@ -86,10 +86,10 @@ export default function Contact() {
 					<motion.span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
 						{t('sectionTitle')}
 					</motion.span>
-					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-6 text-balance">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
 						{t('sectionTitleHighlight')}
 					</h2>
-					<p className="text-lg text-muted-foreground font-[family-name:var(--font-source-sans)] max-w-2xl mx-auto text-pretty">
+					<p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto text-pretty">
 						{t('sectionSubtitle')}
 					</p>
 				</motion.div>
@@ -103,7 +103,7 @@ export default function Contact() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-6">
+						<h3 className="text-2xl font-bold font-heading mb-6">
 							{t('formTitle')}
 						</h3>
 
@@ -282,7 +282,7 @@ export default function Contact() {
 						transition={{ duration: 0.6 }}
 					>
 						<div>
-							<h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-6">
+							<h3 className="text-2xl font-bold font-heading mb-6">
 								{t('infoTitle')}
 							</h3>
 							<p className="text-muted-foreground mb-8 leading-relaxed">
