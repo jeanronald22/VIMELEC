@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Contact Request — VIMELEC</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f4f8; font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f0f4f8; padding: 40px 16px;">
+    <tr>
+      <td align="center">
+
+        <!-- Main Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+
+          <!-- ===== HEADER ===== -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #0C1B2A 0%, #1a3a5c 50%, #2563EB 100%); padding: 40px 40px 32px 40px; text-align: center;">
+              <!-- Logo / Brand -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <div style="display: inline-block; background-color: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 10px 24px; margin-bottom: 20px;">
+                      <span style="font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: 3px;">VIMELEC</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top: 8px;">
+                    <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 700; line-height: 1.3;">
+                      New Contact Request
+                    </h1>
+                    <p style="margin: 8px 0 0 0; color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 400;">
+                      Submitted from vimelec.com
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== QUICK INFO BAR ===== -->
+          <tr>
+            <td style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 16px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="font-size: 13px; color: #64748b;">
+                    Received: <strong style="color: #334155;">{{date}}</strong>
+                  </td>
+                  <td align="right" style="font-size: 13px;">
+                    <span style="display: inline-block; background-color: #dcfce7; color: #166534; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">New Lead</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== BODY ===== -->
+          <tr>
+            <td style="padding: 32px 40px 16px 40px;">
+
+              <!-- Contact Person -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px;">
+                <tr>
+                  <td>
+                    <div style="display: inline-block; width: 48px; height: 48px; background: linear-gradient(135deg, #2563EB, #3b82f6); border-radius: 50%; text-align: center; line-height: 48px; font-size: 20px; color: #ffffff; font-weight: 700; vertical-align: middle;">
+                      {{firstName[0]}}
+                    </div>
+                    <div style="display: inline-block; vertical-align: middle; margin-left: 14px;">
+                      <p style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a;">{{firstName}} {{lastName}}</p>
+                      <p style="margin: 2px 0 0 0; font-size: 13px; color: #64748b;">Potential Client</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Info Grid -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin-bottom: 24px;">
+                <!-- Email Row -->
+                <tr>
+                  <td style="padding: 14px 20px; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; width: 140px;">
+                    <span style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Email</span>
+                  </td>
+                  <td style="padding: 14px 20px; border-bottom: 1px solid #e2e8f0;">
+                    <a href="mailto:{{email}}" style="font-size: 14px; color: #2563EB; text-decoration: none; font-weight: 500;">{{email}}</a>
+                  </td>
+                </tr>
+                <!-- Phone Row -->
+                <tr>
+                  <td style="padding: 14px 20px; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                    <span style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Phone</span>
+                  </td>
+                  <td style="padding: 14px 20px; border-bottom: 1px solid #e2e8f0;">
+                    <a href="tel:{{phone}}" style="font-size: 14px; color: #0f172a; text-decoration: none; font-weight: 500;">{{phone}}</a>
+                  </td>
+                </tr>
+                <!-- Service Row -->
+                <tr>
+                  <td style="padding: 14px 20px; background-color: #f8fafc;">
+                    <span style="font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Service</span>
+                  </td>
+                  <td style="padding: 14px 20px;">
+                    <span style="display: inline-block; background: linear-gradient(135deg, #eff6ff, #dbeafe); color: #1d4ed8; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 8px; border: 1px solid #bfdbfe;">{{service}}</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Message Section -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px;">
+                <tr>
+                  <td>
+                    <p style="margin: 0 0 10px 0; font-size: 12px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Message</p>
+                    <div style="background-color: #f8fafc; border-left: 4px solid #2563EB; border-radius: 0 12px 12px 0; padding: 20px 24px;">
+                      <p style="margin: 0; font-size: 14px; color: #334155; line-height: 1.7; white-space: pre-wrap;">{{message}}</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
+                <tr>
+                  <td align="center" style="padding: 8px 0;">
+                    <a href="mailto:{{email}}?subject=Re: Your inquiry about {{service}} — VIMELEC&body=Dear {{firstName}},%0A%0AThank you for your interest in our services.%0A%0A" style="display: inline-block; background: linear-gradient(135deg, #2563EB, #1d4ed8); color: #ffffff; font-size: 14px; font-weight: 700; padding: 14px 40px; border-radius: 10px; text-decoration: none; letter-spacing: 0.3px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
+                      Reply to {{firstName}}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ===== DIVIDER ===== -->
+          <tr>
+            <td style="padding: 0 40px;">
+              <div style="border-top: 1px solid #e2e8f0;"></div>
+            </td>
+          </tr>
+
+          <!-- ===== FOOTER ===== -->
+          <tr>
+            <td style="padding: 24px 40px 32px 40px; text-align: center;">
+              <p style="margin: 0 0 6px 0; font-size: 13px; color: #94a3b8;">
+                <strong style="color: #64748b;">VIMELEC</strong> — Energy & Maintenance Solutions
+              </p>
+              <p style="margin: 0 0 4px 0; font-size: 12px; color: #cbd5e1;">
+                Yassa, Douala &nbsp;|&nbsp; +237 693 455 423
+              </p>
+              <p style="margin: 0; font-size: 12px; color: #cbd5e1;">
+                vimelec.tech@gmail.com
+              </p>
+              <p style="margin: 16px 0 0 0; font-size: 11px; color: #cbd5e1;">
+                This email was automatically sent from the VIMELEC website contact form.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End Main Card -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- End Wrapper -->
+
+</body>
+</html>

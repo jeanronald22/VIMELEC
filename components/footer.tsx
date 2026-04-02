@@ -60,9 +60,9 @@ export default function Footer() {
 
 	// 🔹 Contact Info
 	const contactInfo = [
-		{ icon: Phone, text: t('contactInfo.phone') },
-		{ icon: Mail, text: t('contactInfo.email') },
-		{ icon: MapPin, text: t('contactInfo.address') },
+		{ icon: Phone, text: t('contactInfo.phone'), href: 'tel:+237693455423' },
+		{ icon: Mail, text: t('contactInfo.email'), href: 'mailto:vimelec.tech@gmail.com' },
+		{ icon: MapPin, text: t('contactInfo.address'), href: 'https://maps.google.com/?q=Yassa+Douala+Cameroun' },
 	];
 
 	return (
@@ -96,8 +96,11 @@ export default function Footer() {
 						{/* Contact Info */}
 						<div className="space-y-3">
 							{contactInfo.map((item, index) => (
-								<motion.div
+								<motion.a
 									key={index}
+									href={item.href}
+									target={item.href.startsWith('http') ? '_blank' : undefined}
+									rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
 									initial={{ opacity: 0, x: -20 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									viewport={{ once: true }}
@@ -105,11 +108,11 @@ export default function Footer() {
 										duration: 0.5,
 										delay: index * 0.1,
 									}}
-									className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+									className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
 								>
 									<item.icon className="h-4 w-4 text-primary" />
 									<span>{item.text}</span>
-								</motion.div>
+								</motion.a>
 							))}
 						</div>
 					</motion.div>
