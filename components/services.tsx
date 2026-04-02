@@ -101,7 +101,7 @@ export default function Services() {
 					className="text-center mb-16"
 				>
 					<motion.span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
-						{t('sectionTitle')}
+						{t('sectionBadge')}
 					</motion.span>
 					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
 						{t('sectionTitle')}
@@ -112,8 +112,8 @@ export default function Services() {
 				</motion.div>
 
 				{/* Grid des services */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-					{services.map((service, index) => (
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+					{services.slice(0, 6).map((service, index) => (
 						<motion.div
 							key={service.title}
 							initial={{ opacity: 0, y: 30 }}
@@ -146,6 +146,46 @@ export default function Services() {
 						</motion.div>
 					))}
 				</div>
+
+				{/* Featured Service — IT/Digital */}
+				{services[6] && (
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5, delay: 0.2 }}
+						whileHover={{ y: -4 }}
+						className="group relative bg-gradient-to-r from-primary/10 via-card to-accent/10 border border-primary/20 rounded-2xl p-8 md:p-10 mb-12 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300"
+					>
+						<div className="grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
+							<div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center group-hover:shadow-lg shrink-0">
+								{(() => {
+									const Icon = services[6].icon;
+									return <Icon className="w-8 h-8 text-white" />;
+								})()}
+							</div>
+							<div>
+								<h3 className="text-2xl font-bold mb-2">
+									{services[6].title}
+								</h3>
+								<p className="text-muted-foreground mb-4 md:mb-0">
+									{services[6].description}
+								</p>
+							</div>
+							<ul className="space-y-2 shrink-0">
+								{services[6].features.map((feature) => (
+									<li
+										key={feature}
+										className="flex items-center text-sm text-muted-foreground"
+									>
+										<div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+										{feature}
+									</li>
+								))}
+							</ul>
+						</div>
+					</motion.div>
+				)}
 
 				{/* CTA */}
 				<div className="text-center">

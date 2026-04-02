@@ -63,6 +63,7 @@
 		}
 	},
 	"Services": {
+		"sectionBadge": "Our Services",
 		"sectionTitle": "Engineering & Maintenance Solutions",
 		"sectionSubtitle": "From installation to maintenance, we provide electrical solutions tailored to your needs",
 		"cta": "Request a Consultation",
@@ -124,6 +125,7 @@
 		}
 	},
 	"RecentWorks": {
+		"sectionBadge": "Our Work",
 		"sectionTitle": "Portfolio",
 		"sectionSubtitle": "Ready to power your future? Contact us today for a free consultation and see how we can help you.",
 		"cta": "View All Projects",
@@ -182,6 +184,33 @@
 				"stat1": "Transformer: 630 KVA",
 				"stat2": "Duration: 5 days",
 				"stat3": "Status: In service"
+			}
+		}
+	},
+	"FAQ": {
+		"sectionBadge": "FAQ",
+		"sectionTitle": "Everything you need to know",
+		"sectionSubtitle": "Find answers to the most common questions about our services and how we work.",
+		"items": {
+			"q1": {
+				"question": "What types of services do you offer?",
+				"answer": "VIMELEC offers comprehensive electrical engineering services (installation, maintenance, diagnostics), solar solutions, smart home integration, energy storage, and digital transformation including custom software development."
+			},
+			"q2": {
+				"question": "What areas do you serve?",
+				"answer": "We primarily operate in Cameroon (Douala, Yaoundé, Bafoussam, Garoua) and West Africa (Burkina Faso). Contact us to discuss your project regardless of your location."
+			},
+			"q3": {
+				"question": "How can I get a quote for my project?",
+				"answer": "Fill out our contact form describing your project. Our team will get back to you within 24 hours for a free consultation and personalized quote tailored to your needs."
+			},
+			"q4": {
+				"question": "Do you offer post-installation maintenance?",
+				"answer": "Yes, we offer preventive and corrective maintenance contracts with 24/7 support. Our certified technicians ensure regular monitoring of your installations for optimal performance."
+			},
+			"q5": {
+				"question": "What are your response times?",
+				"answer": "For emergencies, we respond within 24 hours. For planned projects, we establish a precise timeline during the consultation phase. Duration depends on project complexity."
 			}
 		}
 	},
@@ -249,10 +278,16 @@
 		},
 		"servicesTitle": "Expertise",
 		"servicesLinks": {
-			"electrical": { "name": "Electrical Installation", "href": "#services" },
+			"electrical": {
+				"name": "Electrical Installation",
+				"href": "#services"
+			},
 			"it": { "name": "Technology & Digital", "href": "#services" },
 			"solar": { "name": "Solar Solutions", "href": "#services" },
-			"maintenance": { "name": "Industrial Maintenance", "href": "#services" }
+			"maintenance": {
+				"name": "Industrial Maintenance",
+				"href": "#services"
+			}
 		},
 		"legalTitle": "Legal",
 		"legalLinks": {

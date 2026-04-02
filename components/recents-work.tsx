@@ -87,7 +87,7 @@ export default function RecentWorks() {
 					transition={{ duration: 0.6 }}
 				>
 					<motion.span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
-						{t('sectionTitle')}
+						{t('sectionBadge')}
 					</motion.span>
 					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
 						{t('sectionTitle')}
@@ -114,6 +114,7 @@ export default function RecentWorks() {
 									src={project.image}
 									alt={project.title}
 									className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+									sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
 									fill
 								/>
 

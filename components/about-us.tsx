@@ -55,8 +55,7 @@ export default function AboutUs() {
 					{t('badge')}
 				</motion.span>
 				<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-balance">
-					{t('title.line1')}
-					{' '}
+					{t('title.line1')}{' '}
 					<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
 						{t('title.line2')}
 					</span>
@@ -82,8 +81,7 @@ export default function AboutUs() {
 							transition={{ duration: 0.6, delay: 0.3 }}
 							className="text-4xl lg:text-5xl font-bold font-heading mb-6 text-balance"
 						>
-							{t('mainTitle.line1')}
-							{' '}
+							{t('mainTitle.line1')}{' '}
 							<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
 								{t('mainTitle.line2')}
 							</span>
@@ -146,6 +144,7 @@ export default function AboutUs() {
 								src="/images/about-us.jpg"
 								alt="VIMELEC — Équipe et installations"
 								fill
+								sizes="(max-width: 1024px) 100vw, 50vw"
 								className="object-cover"
 							/>
 
