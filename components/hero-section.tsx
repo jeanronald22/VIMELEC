@@ -4,10 +4,14 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useCountUp } from '@/hooks/use-count-up';
 import { Button } from './ui/button';
 
 export default function Hero() {
 	const t = useTranslations('Hero');
+	const projects = useCountUp({ end: 50, suffix: '+' });
+	const satisfaction = useCountUp({ end: 98, suffix: '%' });
+	const support = useCountUp({ end: 24, suffix: 'H/7J' });
 	return (
 		<section
 			id="home"
@@ -99,25 +103,25 @@ export default function Hero() {
 							}}
 							className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50"
 						>
-							<div>
+							<div ref={projects.ref}>
 								<div className="text-3xl font-bold font-heading text-primary">
-									50+
+									{projects.display}
 								</div>
 								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.projects')}
 								</div>
 							</div>
-							<div>
+							<div ref={satisfaction.ref}>
 								<div className="text-3xl font-bold font-heading text-primary">
-									98%
+									{satisfaction.display}
 								</div>
 								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.satisfaction')}
 								</div>
 							</div>
-							<div>
+							<div ref={support.ref}>
 								<div className="text-3xl font-bold font-heading text-primary">
-									24H/7J
+									{support.display}
 								</div>
 								<div className="text-sm text-muted-foreground font-sans">
 									{t('stats.support')}
@@ -143,6 +147,7 @@ export default function Hero() {
 								src="/images/hero.jpg"
 								alt="Modern energy solutions with solar panels and sustainable technology"
 								fill
+								sizes="(max-width: 1024px) 100vw, 50vw"
 								className="object-cover"
 								priority
 							/>

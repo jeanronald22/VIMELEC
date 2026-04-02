@@ -63,6 +63,7 @@
 		}
 	},
 	"Services": {
+		"sectionBadge": "Nos Services",
 		"sectionTitle": "Solutions d’ingénierie et de maintenance",
 		"sectionSubtitle": "De l'installation à la maintenance, nous vous proposons des solutions électriques adaptées à vos besoins",
 		"cta": "Demander une consultation",
@@ -124,6 +125,7 @@
 		}
 	},
 	"RecentWorks": {
+		"sectionBadge": "Nos Réalisations",
 		"sectionTitle": "Portfolio",
 		"sectionSubtitle": "Prêt à alimenter votre futur ? Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons vous aider.",
 		"cta": "Voir tous les projets",
@@ -182,6 +184,33 @@
 				"stat1": "Transformateur : 630 KVA",
 				"stat2": "Durée : 5 jours",
 				"stat3": "État : En service"
+			}
+		}
+	},
+	"FAQ": {
+		"sectionBadge": "Questions fréquentes",
+		"sectionTitle": "Tout ce que vous devez savoir",
+		"sectionSubtitle": "Retrouvez les réponses aux questions les plus courantes sur nos services et notre fonctionnement.",
+		"items": {
+			"q1": {
+				"question": "Quels types de services proposez-vous ?",
+				"answer": "VIMELEC propose des services complets en ingénierie électrique (installation, maintenance, diagnostic), solutions solaires, domotique, stockage d'énergie, et transformation digitale incluant le développement logiciel sur mesure."
+			},
+			"q2": {
+				"question": "Dans quelles zones géographiques intervenez-vous ?",
+				"answer": "Nous intervenons principalement au Cameroun (Douala, Yaoundé, Bafoussam, Garoua) et en Afrique de l'Ouest (Burkina Faso). Contactez-nous pour discuter de votre projet, quelle que soit votre localisation."
+			},
+			"q3": {
+				"question": "Comment obtenir un devis pour mon projet ?",
+				"answer": "Remplissez notre formulaire de contact en décrivant votre projet. Notre équipe vous recontactera dans les 24h pour une consultation gratuite et un devis personnalisé adapté à vos besoins."
+			},
+			"q4": {
+				"question": "Proposez-vous un service de maintenance après installation ?",
+				"answer": "Oui, nous proposons des contrats de maintenance préventive et corrective avec support 24h/7j. Nos techniciens certifiés assurent le suivi régulier de vos installations pour une performance optimale."
+			},
+			"q5": {
+				"question": "Quels sont vos délais d'intervention ?",
+				"answer": "Pour les urgences, nous intervenons sous 24h. Pour les projets planifiés, nous établissons un calendrier précis lors de la phase de consultation. La durée dépend de la complexité du projet."
 			}
 		}
 	},
@@ -249,10 +278,16 @@
 		},
 		"servicesTitle": "Expertises",
 		"servicesLinks": {
-			"electrical": { "name": "Installation Électrique", "href": "#services" },
+			"electrical": {
+				"name": "Installation Électrique",
+				"href": "#services"
+			},
 			"it": { "name": "Technologie & Digital", "href": "#services" },
 			"solar": { "name": "Solutions Solaires", "href": "#services" },
-			"maintenance": { "name": "Maintenance Industrielle", "href": "#services" }
+			"maintenance": {
+				"name": "Maintenance Industrielle",
+				"href": "#services"
+			}
 		},
 		"legalTitle": "Mentions légales",
 		"legalLinks": {
