@@ -76,7 +76,7 @@ Le site se mettra à jour automatiquement.
 Le site est hébergé sur **[Vercel](https://vercel.com)** — la plateforme officielle de Next.js.
 
 Déploiement automatique depuis la branche principale (`main`) :
-[https://vimelec.vercel.app](https://vimelec.vercel.app)
+[https://vimelec.vercel.app](https://vimelec.tech/fr)
 
 Pour plus de détails :
 👉 [Documentation officielle du déploiement Next.js](https://nextjs.org/docs/app/building-your-application/deploying)
