@@ -1,103 +1,117 @@
-# VIMELEC — Vente, Ingénierie et Maintenance Électriques
+# VIMELEC — Site vitrine d'une entreprise d'ingénierie électrique
 
-![Texte alternatif](./public/images/og-vimelec.jpeg)
+> Site officiel de **VIMELEC** (Vente, Ingénierie et Maintenance Électriques), entreprise basée à Douala. Il est bilingue (français / anglais), dispose d'un thème clair et sombre, d'animations au défilement et d'un formulaire de contact qui envoie directement les demandes de devis par email.
 
-Bienvenue sur le site officiel de **VIMELEC**, une entreprise spécialisée dans la **vente**, **l’ingénierie** et la **maintenance des équipements électriques**.
-Ce projet est une application web moderne construite avec **Next.js 14**, **Tailwind CSS**, **shadcn/ui**, et **next-intl** pour la gestion multilingue.
+**🌐 Site en ligne : [vimelec.tech](https://vimelec.tech/fr)**
 
----
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Déployé_sur-Vercel-black?logo=vercel)
 
-## Technologies utilisées
-
--   **[Next.js](https://nextjs.org)** — Framework React moderne pour le rendu côté serveur (SSR) et la génération statique (SSG).
--   **[Tailwind CSS](https://tailwindcss.com)** — Framework CSS utilitaire pour un design rapide et cohérent.
--   **[shadcn/ui](https://ui.shadcn.com)** — Composants réutilisables basés sur Radix UI, élégants et accessibles.
--   **[next-intl](https://next-intl-docs.vercel.app)** — Gestion multilingue (anglais, français, chinois et italien).
--   **TypeScript** — Typage statique pour un code plus fiable et maintenable.
+![Page d'accueil de VIMELEC](docs/screenshots/accueil.png)
 
 ---
 
-## Fonctionnalités principales
+## Aperçu
 
--   Interface responsive et performante
--   Gestion **multilingue** : `en`, `fr`, `zh`, `it`
--   Optimisation SEO et balises meta adaptées pour chaque langue
--   Composants UI modernes et cohérents
--   Déploiement continu sur **Vercel**
+| Thème sombre | Services |
+|---|---|
+| ![Accueil en thème sombre](docs/screenshots/accueil-sombre.png) | ![Section des services](docs/screenshots/services.png) |
+| **Réalisations** | **Contact et demande de devis** |
+| ![Section portfolio des réalisations](docs/screenshots/realisations.png) | ![Formulaire de contact](docs/screenshots/contact.png) |
 
----
+## Fonctionnalités
 
-## 🧩 Structure du projet
+- **Bilingue français / anglais** avec `next-intl` : routes par langue (`/fr`, `/en`), sélecteur de langue et traductions dans `messages/`.
+- **Thème clair et sombre** avec `next-themes`.
+- **Formulaire de contact** qui envoie les demandes par email via **EmailJS**, sans serveur à maintenir.
+- **Bouton WhatsApp** flottant pour joindre l'entreprise directement.
+- **Animations** au défilement avec `motion`, et compteurs animés (projets, satisfaction, support).
+- **Référencement** : sitemap généré, image Open Graph par langue pour les partages sur les réseaux sociaux.
+- **Mesure d'audience** avec Vercel Analytics.
+- Page 404 personnalisée et bouton de retour en haut de page.
+
+## Sections du site
+
+| Section | Composant |
+|---|---|
+| Accueil (hero, chiffres clés) | [`hero-section.tsx`](components/hero-section.tsx) |
+| À propos | [`about-us.tsx`](components/about-us.tsx) |
+| Services (7 domaines) | [`services.tsx`](components/services.tsx) |
+| Réalisations (portfolio de chantiers) | [`recents-work.tsx`](components/recents-work.tsx) |
+| FAQ | [`faq.tsx`](components/faq.tsx) |
+| Contact | [`contact-us.tsx`](components/contact-us.tsx) |
+
+## Stack technique
+
+| Domaine | Technologies |
+|---|---|
+| Framework | Next.js 15 (App Router, Turbopack), React 19, TypeScript |
+| Style | Tailwind CSS 4, composants shadcn/ui (Radix UI), lucide-react |
+| Internationalisation | next-intl |
+| Animations | motion |
+| Formulaire | EmailJS |
+| Déploiement | Vercel (déploiement continu depuis `main`), Vercel Analytics |
+
+## Structure du projet
 
 ```
-vimelec/
-│
-├── app/                    # Pages et routes Next.js (App Router)
-│   ├── [locale]/           # Dossiers de langues
-│   ├── layout.tsx          # Layout global
-│   └── page.tsx            # Page d’accueil
-│
-├── components/             # Composants UI réutilisables
-├── lib/                    # Utilitaires et helpers
-├── public/                 # Images et fichiers statiques
-├── locales/                # Fichiers de traduction JSON
-└── tailwind.config.js      # Configuration Tailwind CSS
+VIMELEC/
+├── app/
+│   ├── [locale]/            # Pages par langue (fr, en), 404, image Open Graph
+│   ├── sitemap.ts           # Sitemap généré
+│   └── globals.css
+├── components/              # Sections du site et composants d'interface
+│   └── ui/                  # Composants shadcn/ui
+├── messages/                # Traductions : fr.json, en.json
+├── i18n/, middleware.ts     # Configuration et routage multilingue
+├── services/sendEmail.ts    # Envoi du formulaire via EmailJS
+├── hooks/use-count-up.ts    # Compteurs animés
+├── data/contacts.ts         # Coordonnées de l'entreprise
+└── public/                  # Images et fichiers statiques
 ```
 
----
-
-## 💻 Démarrage du projet
-
-Clone le dépôt, installe les dépendances et lance le serveur de développement :
+## Lancer le projet en local
 
 ```bash
-# Installer les dépendances
+git clone https://github.com/jeanronald22/VIMELEC.git
+cd VIMELEC
 npm install
-# ou
-yarn install
-# ou
-pnpm install
-
-# Lancer le serveur de développement
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
 ```
 
-Une fois lancé, ouvre ton navigateur à [http://localhost:3000](http://localhost:3000)
-Le site se mettra à jour automatiquement.
+Créer un fichier `.env.local` avec les identifiants EmailJS, nécessaires au formulaire de contact :
 
----
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=...
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=...
+NEXT_PUBLIC_EMAILJS_USER_ID=...
+```
 
-## 🌐 Déploiement
+Puis lancer le serveur de développement :
 
-Le site est hébergé sur **[Vercel](https://vercel.com)** — la plateforme officielle de Next.js.
+```bash
+npm run dev
+```
 
-Déploiement automatique depuis la branche principale (`main`) :
-[https://vimelec.vercel.app](https://vimelec.tech/fr)
+Le site est alors disponible sur [http://localhost:3000](http://localhost:3000).
 
-Pour plus de détails :
-👉 [Documentation officielle du déploiement Next.js](https://nextjs.org/docs/app/building-your-application/deploying)
+| Commande | Rôle |
+|---|---|
+| `npm run dev` | Serveur de développement (Turbopack) |
+| `npm run build` | Build de production |
+| `npm run start` | Lancement du build de production |
+| `npm run lint` | Vérification ESLint |
 
----
+## Déploiement
 
-## 📘 Ressources utiles
+Le site est déployé sur **Vercel**, avec un déploiement automatique à chaque push sur la branche `main`. Il est servi sur le domaine [vimelec.tech](https://vimelec.tech/fr).
 
--   [Documentation Next.js](https://nextjs.org/docs)
--   [Guide Tailwind CSS](https://tailwindcss.com/docs)
--   [shadcn/ui Documentation](https://ui.shadcn.com/docs)
--   [next-intl Documentation](https://next-intl-docs.vercel.app)
+## À propos de VIMELEC
 
----
+**VIMELEC** propose des solutions électriques complètes :
 
-## 🏢 À propos de VIMELEC
-
-**VIMELEC (Vente Ingénierie et Maintenances Électriques)** est une entreprise spécialisée dans la fourniture de solutions électriques complètes :
-
--   Installation et maintenance des équipements
--   Études et ingénierie des réseaux électriques
--   Vente de matériel électrique professionnel
-
-> Notre mission : fournir des solutions électriques sûres, durables et adaptées aux besoins de nos clients.
+- installation électrique, énergie solaire et stockage d'énergie ;
+- domotique, maintenance et conseil énergétique ;
+- développement logiciel et transformation digitale.
